@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>1win 500% Bonus | Эксклюзивное предложение</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Эксклюзивный бонус до 500% на депозит для новых игроков 1win. Современный лендинг с промокодом и быстрым стартом.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-layer"></div>
+
+<header class="header">
+  <div class="container header__inner">
+    <div class="logo">
+      <span class="logo__mark"></span>
+      <span class="logo__text">1win Pulse</span>
+    </div>
+    <nav class="nav">
+      <a href="#steps" class="nav__link">Как начать</a>
+      <a href="#details" class="nav__link">О бонусе</a>
+      <a href="#reviews" class="nav__link">Отзывы</a>
+      <a href="#faq" class="nav__link">FAQ</a>
+    </nav>
+    <a href="#cta" class="header__btn btn btn--outline">Забрать бонус</a>
+    <button class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container hero__grid">
+      <div class="hero__left reveal">
+        <p class="hero__eyebrow">Партнёрское промо-предложение 1win</p>
+        <h1 class="hero__title">
+          До <span class="hero__accent">500% на первый депозит</span>
+          для новых игроков 1win
+        </h1>
+        <p class="hero__subtitle">
+          Современная платформа 1win с бонусом до 500% на старт.
+          Короткая регистрация, промокод и быстрый депозит — всё в одном месте.
+        </p>
+
+        <div class="hero__promo">
+          <p class="hero__promo-label">Промокод 1win</p>
+          <div class="hero__promo-row">
+            <!-- ЗАМЕНИ value НА СВОЙ ПРОМОКОД -->
+            <input type="text" id="promo-main" class="hero__promo-code" value="YOURPROMO" readonly>
+            <button class="btn btn--ghost hero__promo-copy" id="promo-main-copy">Скопировать</button>
+          </div>
+          <p class="hero__promo-hint">
+            Скопируй промокод, введи его при регистрации и следуй инструкциям ниже.
+          </p>
+        </div>
+
+        <div class="hero__actions">
+          <!-- ЗАМЕНИ href НА СВОЮ АФФИЛИАТ-ССЫЛКУ 1win -->
+          <a href="https://example.com/your-1win-aff-link" class="btn btn--primary" id="cta-main">
+            Перейти на 1win
+          </a>
+          <button class="btn btn--ghost scroll-to-steps">
+            Как это работает
+          </button>
+        </div>
+
+        <div class="hero__meta">
+          <span class="hero__tag">18+ Только для совершеннолетних</span>
+          <span class="hero__timer">
+            Акция активна ещё: <span id="countdown">15:00</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="hero__right reveal">
+        <div class="hero-panel hero-panel--main">
+          <div class="hero-panel__header">
+            <p class="hero-panel__label">Live статистика</p>
+            <span class="hero-dot hero-dot--live"></span>
+          </div>
+          <div class="hero-panel__stats">
+            <div class="hero-kpi">
+              <p class="hero-kpi__label">Сейчас на 1win</p>
+              <p class="hero-kpi__value" id="kpi-online">1 247</p>
+            </div>
+            <div class="hero-kpi">
+              <p class="hero-kpi__label">Средний бонус</p>
+              <p class="hero-kpi__value hero-kpi__value--accent">340%</p>
+            </div>
+            <div class="hero-kpi">
+              <p class="hero-kpi__label">Максимум</p>
+              <p class="hero-kpi__value">500%</p>
+            </div>
+          </div>
+          <div class="hero-progress">
+            <div class="hero-progress__top">
+              <span>Спецпредложение</span>
+              <span id="hero-left-label">Осталось 78%</span>
+            </div>
+            <div class="hero-progress__bar">
+              <span class="hero-progress__fill" id="hero-progress"></span>
+            </div>
+            <p class="hero-progress__hint">
+              Данные по активной акции 1win обновляются в реальном времени.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-panel hero-panel--side">
+          <p class="hero-panel__mini-title">Быстрый старт</p>
+          <ul class="hero-panel__list">
+            <li>Регистрация: 1–2 минуты</li>
+            <li>Промокод: активирует бонус</li>
+            <li>Пополнение: популярные платёжные методы</li>
+            <li>Вывод: от нескольких минут</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скролл-индикатор -->
+    <button class="hero-scroll scroll-to-steps">
+      <span>Листай вниз</span>
+      <div class="hero-scroll__circle"></div>
+    </button>
+  </section>
+
+  <!-- STEPS (timeline) -->
+  <section class="section section--soft" id="steps">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">3 шага, чтобы забрать бонус 1win</h2>
+        <p class="section__subtitle">
+          Минимум текста — максимум конкретики. Следуй по таймлайну.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__point"></div>
+          <div class="timeline__content">
+            <p class="timeline__step">Шаг 1</p>
+            <h3 class="timeline__title">Перейди по кнопке на 1win</h3>
+            <p class="timeline__text">
+              Нажми «Перейти на 1win», чтобы открыть официальную страницу регистрации
+              с актуальной акцией под твой регион.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__point"></div>
+          <div class="timeline__content">
+            <p class="timeline__step">Шаг 2</p>
+            <h3 class="timeline__title">Введи промокод при регистрации</h3>
+            <p class="timeline__text">
+              Скопируй промокод с этого сайта и вставь его в поле промокода/акции на 1win —
+              так ты привязываешь к себе бонус.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__point"></div>
+          <div class="timeline__content">
+            <p class="timeline__step">Шаг 3</p>
+            <h3 class="timeline__title">Сделай первый депозит</h3>
+            <p class="timeline__text">
+              Пополни счёт удобным способом. В рамках текущей акции 1win начисляет
+              до 500% бонусом к твоей сумме.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BAND -->
+  <section class="section section--band" id="cta">
+    <div class="container band reveal">
+      <div class="band__left">
+        <p class="band__label">Промокод 1win</p>
+        <h2 class="band__title">Закрепи за собой бонус до 500%</h2>
+        <p class="band__text">
+          Скопируй промокод, затем нажми на кнопку — промо останется в буфере и ты сразу
+          сможешь вставить его на странице регистрации 1win.
+        </p>
+        <div class="band__promo">
+          <!-- ЗАМЕНИ value НА СВОЙ ПРОМОКОД (можно тот же, что и сверху) -->
+          <input type="text" id="promo-band" class="band__promo-code" value="YOURPROMO" readonly>
+          <button class="btn btn--outline band__promo-copy" id="promo-band-copy">Копировать</button>
+        </div>
+      </div>
+      <div class="band__right">
+        <!-- ЗАМЕНИ href НА СВОЮ АФФИЛИАТ-ССЫЛКУ -->
+        <a href="https://example.com/your-1win-aff-link" class="btn btn--primary btn--big band__btn">
+          Перейти на 1win
+        </a>
+        <p class="band__note">
+          Нажимая на кнопку, ты попадаешь на официальный сайт 1win по партнёрской ссылке.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS / FEATURES -->
+  <section class="section" id="details">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Что важно знать про бонус 1win</h2>
+      </div>
+      <div class="grid-features">
+        <article class="card feature-card reveal">
+          <p class="feature-card__tag">Бонус</p>
+          <h3 class="feature-card__title">До 500% к депозиту</h3>
+          <p class="feature-card__text">
+            Размер бонуса зависит от суммы пополнения и условий акции. Ты видишь актуальные
+            цифры уже на стороне 1win при регистрации.
+          </p>
+        </article>
+
+        <article class="card feature-card reveal">
+          <p class="feature-card__tag">Прозрачность</p>
+          <h3 class="feature-card__title">Условия на стороне 1win</h3>
+          <p class="feature-card__text">
+            Все нюансы по отыгрышу, коэффициентам, лимитам и ограничениям указаны
+            прямо на официальном сайте 1win. Мы их не меняем.
+          </p>
+        </article>
+
+        <article class="card feature-card reveal">
+          <p class="feature-card__tag">Скорость</p>
+          <h3 class="feature-card__title">Регистрация и вывод</h3>
+          <p class="feature-card__text">
+            Обычно регистрация занимает 1–2 минуты, а вывод при соблюдении условий —
+            от нескольких минут до часа, в зависимости от метода.
+          </p>
+        </article>
+
+        <article class="card feature-card reveal">
+          <p class="feature-card__tag">Ответственность</p>
+          <h3 class="feature-card__title">Азартные игры = риск</h3>
+          <p class="feature-card__text">
+            Не относись к 1win как к источнику дохода. Это азартная игра. Используй только те деньги,
+            которые не жалко потерять, и ставь личные лимиты.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section section--soft" id="reviews">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">Мнения игроков из сети</h2>
+        <p class="section__subtitle">
+          Собрали типичные отзывы о 1win и стартовом бонусе через промо.
+        </p>
+      </div>
+
+      <div class="reviews-slider">
+        <article class="review-card reveal">
+          <p class="review-card__text">
+            «Залетел через промокод, бонус прилетел сразу после депозита. Главное — не игнорить условия,
+            тогда никаких сюрпризов».
+          </p>
+          <div class="review-card__meta">
+            <span class="review-card__user">@win***</span>
+            <span class="review-card__tag">ставки + live</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <p class="review-card__text">
+            «500% — это громко звучит, но в целом бонус норм, если не считать его “бесплатными деньгами”,
+            а использовать с головой».
+          </p>
+          <div class="review-card__meta">
+            <span class="review-card__user">@pro***</span>
+            <span class="review-card__tag">опыт 1 год</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <p class="review-card__text">
+            «Интерфейс у 1win приятный, депы и выводы не тормозят. Бонус помогает протестить площадку
+            с меньшим риском».
+          </p>
+          <div class="review-card__meta">
+            <span class="review-card__user">@play***</span>
+            <span class="review-card__tag">казино + слоты</span>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <p class="review-card__text">
+            «Не воспринимайте бонус как способ “поднять с нуля”. Играй как в развлечение, и все будет ок».
+          </p>
+          <div class="review-card__meta">
+            <span class="review-card__user">@cas***</span>
+            <span class="review-card__tag">ответственная игра</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 class="section__title">FAQ по 1win и бонусу</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Это официальный сайт 1win?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Нет. Это промо-лендинг партнёра. Мы не принимаем платежи и не проводим игры.
+              Все депозиты, ставки и бонусы проходят уже на официальном сайте 1win.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Бонус 500% выдается всем?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Размер бонуса зависит от текущей акции на 1win, суммы депозита, региона и промокода.
+              Актуальные условия всегда указаны на сайте 1win в момент регистрации.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Нужна ли верификация?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Обычно верификация требуется при выводе крупных сумм или по запросу 1win.
+              Конкретные требования смотри в разделе «Помощь» / «Правила» на сайте 1win.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Какие риски?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>
+              Азартные игры — это всегда риск потери денег. Не используй для депозита
+              последние деньги, не занимай в долг, ставь личные лимиты и относись к 1win
+              как к развлечению, а не к заработку.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- MOBILE STICKY CTA -->
+<div class="sticky-cta">
+  <!-- ЗАМЕНИ href НА СВОЮ АФФ-СЫЛКУ -->
+  <a href="https://example.com/your-1win-aff-link" class="sticky-cta__btn">
+    Забрать бонус 1win
+  </a>
+</div>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__logo">1win Pulse</p>
+      <p class="footer__text">
+        Этот сайт не является 1win, казино или букмекерской конторой. Мы не принимаем ставки и
+        не организуем азартные игры. Здесь размещена промо-информация и ссылки на официальный сайт 1win.
+      </p>
+    </div>
+    <div class="footer__meta">
+      <p class="footer__warning">18+ Азартные игры могут вызывать зависимость. Играйте ответственно.</p>
+      <a href="#top" class="footer__link">Вернуться наверх</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
