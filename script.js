@@ -1,180 +1,6 @@
-// Smooth scroll to sections
-document.querySelectorAll('a[href^="#"], .scroll-to-steps').forEach((el) => {
-  el.addEventListener('click', (e) => {
-    const href = el.getAttribute('href');
-    const isStepsBtn = el.classList.contains('scroll-to-steps');
+// Весь старый код оставь как был...
 
-    const targetId = isStepsBtn
-      ? 'steps'
-      : href && href.startsWith('#')
-      ? href.slice(1)
-      : null;
-
-    if (!targetId) return;
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    e.preventDefault();
-    window.scrollTo({
-      top: target.offsetTop - 70,
-      behavior: 'smooth'
-    });
-  });
-});
-
-// Burger menu
-const burger = document.getElementById('burger');
-const nav = document.querySelector('.nav');
-
-if (burger && nav) {
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('nav--open');
-  });
-
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('nav--open');
-    });
-  });
-}
-
-// Countdown 15:00
-(function startCountdown() {
-  const display = document.getElementById('countdown');
-  if (!display) return;
-
-  let totalSeconds = 15 * 60;
-
-  function updateCountdown() {
-    const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
-    const seconds = String(totalSeconds % 60).padStart(2, '0');
-    display.textContent = `${minutes}:${seconds}`;
-
-    if (totalSeconds > 0) {
-      totalSeconds--;
-    } else {
-      display.textContent = '00:00';
-    }
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-})();
-
-// Live stats (онлайн + остаток бонуса)
-(function liveStats() {
-  const onlineEl = document.getElementById('kpi-online');
-  const progressEl = document.getElementById('hero-progress');
-  const leftLabelEl = document.getElementById('hero-left-label');
-
-  if (!onlineEl || !progressEl || !leftLabelEl) return;
-
-  function formatNumber(n) {
-    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-  }
-
-  function update() {
-    const baseOnline = 900;
-    const online = baseOnline + Math.floor(Math.random() * 600);
-    onlineEl.textContent = formatNumber(online);
-
-    const left = 60 + Math.floor(Math.random() * 25); // 60–85%
-    progressEl.style.width = left + '%';
-    leftLabelEl.textContent = `Осталось ${left}%`;
-  }
-
-  update();
-  setInterval(update, 9000);
-})();
-
-// FAQ accordion
-document.querySelectorAll('.faq-item').forEach((item) => {
-  const btn = item.querySelector('.faq-item__question');
-  const answer = item.querySelector('.faq-item__answer');
-
-  btn.addEventListener('click', () => {
-    const isOpen = item.classList.contains('faq-item--open');
-
-    document.querySelectorAll('.faq-item').forEach((i) => {
-      i.classList.remove('faq-item--open');
-      const ans = i.querySelector('.faq-item__answer');
-      if (ans) ans.style.maxHeight = null;
-    });
-
-    if (!isOpen) {
-      item.classList.add('faq-item--open');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
-  });
-});
-
-// Copy promo code helper
-function bindPromoCopy(inputId, btnId) {
-  const input = document.getElementById(inputId);
-  const btn = document.getElementById(btnId);
-
-  if (!input || !btn) return;
-
-  btn.addEventListener('click', () => {
-    const value = input.value.trim();
-    if (!value) return;
-
-    function setCopiedState() {
-      const original = btn.textContent;
-      btn.textContent = 'Скопировано';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.disabled = false;
-      }, 2000);
-    }
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard
-        .writeText(value)
-        .then(setCopiedState)
-        .catch(() => {
-          input.select();
-          document.execCommand('copy');
-          setCopiedState();
-        });
-    } else {
-      input.select();
-      document.execCommand('copy');
-      setCopiedState();
-    }
-  });
-}
-
-bindPromoCopy('promo-main', 'promo-main-copy');
-bindPromoCopy('promo-band', 'promo-band-copy');
-
-// Reveal on scroll (IntersectionObserver)
-(function revealOnScroll() {
-  const elements = document.querySelectorAll('.reveal');
-  if (!elements.length) return;
-
-  const show = (el) => el.classList.add('reveal--visible');
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            show(entry.target);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    elements.forEach((el) => observer.observe(el));
-  } else {
-    // fallback
-    elements.forEach(show);
-  }
-})();
+// А в КОНЕЦ файла добавь только ЭТО:
 
 // Simple language switcher
 const langBtns = document.querySelectorAll('.lang-btn');
@@ -189,156 +15,7 @@ const translations = {
     cta1: 'Перейти на 1win',
     cta2: 'Как это работает',
     tag: '18+ Только для совершеннолетних',
-    stepsTitle: '3 шага, чтобы забрать бонус 1win',
-    stepsSubtitle: 'Минимум текста — максимум конкретики. Следуй по таймлайну.',
-    bandLabel: 'Промокод 1win',
-    bandTitle: 'Закрепи за собой бонус до 500%',
-    bandText: 'Скопируй промокод, затем нажми на кнопку — промо останется в буфере и ты сразу сможешь вставить его на странице регистрации 1win.',
-    detailsTitle: 'Что важно знать про бонус 1win',
-    reviewsTitle: 'Мнения игроков из сети',
-    reviewsSubtitle: 'Собрали типичные отзывы о 1win и стартовом бонусе через промо.',
-    faqTitle: 'FAQ по 1win и бонусу',
-    stickyBtn: 'Забрать бонус 1win'
-  },
-  en: {
-    eyebrow: '1win Partner Promo Offer',
-    title: 'Up to <span class="hero__accent">500% on first deposit</span> for new 1win players',
-    subtitle: 'Modern 1win platform with up to 500% welcome bonus. Quick registration, promo code and fast deposit — all in one place.',
-    promoLabel: '1win Promo Code',
-    promoHint: 'Copy the promo code, enter it during registration and follow the instructions below.',
-    cta1: 'Go to 1win',
-    cta2: 'How it works',
-    tag: '18+ For adults only',
-    stepsTitle: '3 steps to get 1win bonus',
-    stepsSubtitle: 'Minimum text — maximum specifics. Follow the timeline.',
-    bandLabel: '1win Promo Code',
-    bandTitle: 'Secure up to 500% bonus for yourself',
-    bandText: 'Copy the promo code, then click the button — the promo will remain in the buffer and you can immediately paste it on the 1win registration page.',
-    detailsTitle: 'What you should know about 1win bonus',
-    reviewsTitle: 'Player opinions from the web',
-    reviewsSubtitle: 'Collected typical reviews about 1win and welcome bonus via promo.',
-    faqTitle: 'FAQ about 1win and bonus',
-    stickyBtn: 'Get 1win bonus'
-  }
-};
-
-function switchLanguage(lang) {
-  langBtns.forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-  
-  // Update navigation
-  document.querySelectorAll('[data-ru][data-en]').forEach(el => {
-    el.textContent = el.dataset[lang];
-  });
-  
-  const t = translations[lang];
-  
-  // Hero section
-  document.querySelector('.hero__eyebrow').textContent = t.eyebrow;
-  document.querySelector('.hero__title').innerHTML = t.title;
-  document.querySelector('.hero__subtitle').textContent = t.subtitle;
-  document.querySelector('.hero__promo-label').textContent = t.promoLabel;
-  document.querySelector('.hero__promo-hint').textContent = t.promoHint;
-  document.querySelector('#cta-main').textContent = t.cta1;
-  document.querySelector('.scroll-to-steps').textContent = t.cta2;
-  document.querySelector('.hero__tag').textContent = t.tag;
-  document.querySelector('.hero__timer').innerHTML = t.timerText + ' <span id="countdown">15:00</span>';
-  
-  // Right panel
-  document.querySelector('.hero-panel__label').textContent = t.statsLabel;
-  document.querySelectorAll('.hero-kpi__label')[0].textContent = t.online;
-  document.querySelectorAll('.hero-kpi__label')[1].textContent = t.avgBonus;
-  document.querySelectorAll('.hero-kpi__label')[2].textContent = t.max;
-  document.querySelector('.hero-progress__top span:first-child').textContent = t.offer;
-  document.querySelector('.hero-progress__hint').textContent = t.hint;
-  document.querySelector('.hero-panel__mini-title').textContent = t.quickTitle;
-  document.querySelectorAll('.hero-panel__list li').forEach((li, i) => {
-    li.textContent = t.quickItems[i];
-  });
-  document.querySelector('.hero-scroll span').textContent = t.scroll;
-  
-  // Steps
-  document.querySelector('#steps .section__title').textContent = t.stepsTitle;
-  document.querySelector('#steps .section__subtitle').textContent = t.stepsSubtitle;
-  document.querySelectorAll('.timeline__step').forEach((el, i) => {
-    el.textContent = [t.step1, t.step2, t.step3][i];
-  });
-  document.querySelectorAll('.timeline__title').forEach((el, i) => {
-    el.textContent = [t.step1Title, t.step2Title, t.step3Title][i];
-  });
-  document.querySelectorAll('.timeline__text').forEach((el, i) => {
-    el.textContent = [t.step1Text, t.step2Text, t.step3Text][i];
-  });
-  
-  // Banner
-  document.querySelector('.band__label').textContent = t.bandLabel;
-  document.querySelector('.band__title').textContent = t.bandTitle;
-  document.querySelector('.band__text').textContent = t.bandText;
-  document.querySelector('#promo-band-copy').textContent = t.bandCopy;
-  document.querySelector('.band__note').textContent = t.bandNote;
-  document.querySelector('.band__btn').textContent = t.bandBtn;
-  
-  // Features
-  document.querySelector('#details .section__title').textContent = t.detailsTitle;
-  document.querySelectorAll('.feature-card__tag').forEach((el, i) => {
-    el.textContent = [t.feature1Tag, t.feature2Tag, t.feature3Tag, t.feature4Tag][i];
-  });
-  document.querySelectorAll('.feature-card__title').forEach((el, i) => {
-    el.textContent = [t.feature1Title, t.feature2Title, t.feature3Title, t.feature4Title][i];
-  });
-  document.querySelectorAll('.feature-card__text').forEach((el, i) => {
-    el.textContent = [t.feature1Text, t.feature2Text, t.feature3Text, t.feature4Text][i];
-  });
-  
-  // Reviews
-  document.querySelector('#reviews .section__title').textContent = t.reviewsTitle;
-  document.querySelector('#reviews .section__subtitle').textContent = t.reviewsSubtitle;
-  
-  // FAQ
-  document.querySelector('#faq .section__title').textContent = t.faqTitle;
-  document.querySelectorAll('.faq-item__question').forEach((el, i) => {
-    const text = [t.faq1, t.faq2, t.faq3, t.faq4][i];
-    el.childNodes[0].textContent = text;
-  });
-  document.querySelectorAll('.faq-item__answer p').forEach((el, i) => {
-    el.textContent = [t.faq1a, t.faq2a, t.faq3a, t.faq4a][i];
-  });
-  
-  // Buttons
-  document.querySelectorAll('#promo-main-copy, #promo-band-copy').forEach(btn => {
-    if (btn.textContent === 'Скопировано' || btn.textContent === 'Copied') {
-      btn.textContent = t.copiedBtn;
-    } else {
-      btn.textContent = t.copyBtn;
-    }
-  });
-  document.querySelector('.sticky-cta__btn').textContent = t.stickyBtn;
-  document.querySelector('.header__btn').textContent = t.headerBtn;
-  
-  // Footer
-  document.querySelector('.footer__logo').textContent = t.footerLogo;
-  document.querySelector('.footer__text').textContent = t.footerText;
-  document.querySelector('.footer__warning').textContent = t.footerWarning;
-  document.querySelector('.footer__link').textContent = t.footerLink;
-  
-  localStorage.setItem('siteLang', lang);
-}
-  
-  const translations = {
-  ru: {
-    // Навигация уже через data-атрибуты
-    eyebrow: 'Партнёрское промо-предложение 1win',
-    title: 'До <span class="hero__accent">500% на первый депозит</span> для новых игроков 1win',
-    subtitle: 'Современная платформа 1win с бонусом до 500% на старт. Короткая регистрация, промокод и быстрый депозит — всё в одном месте.',
-    promoLabel: 'Промокод 1win',
-    promoHint: 'Скопируй промокод, введи его при регистрации и следуй инструкциям ниже.',
-    cta1: 'Перейти на 1win',
-    cta2: 'Как это работает',
-    tag: '18+ Только для совершеннолетних',
     timerText: 'Акция активна ещё:',
-    
-    // Правая панель
     statsLabel: 'Live статистика',
     online: 'Сейчас на 1win',
     avgBonus: 'Средний бонус',
@@ -349,8 +26,6 @@ function switchLanguage(lang) {
     quickTitle: 'Быстрый старт',
     quickItems: ['Регистрация: 1–2 минуты', 'Промокод: активирует бонус', 'Пополнение: популярные платёжные методы', 'Вывод: от нескольких минут'],
     scroll: 'Листай вниз',
-    
-    // Шаги
     stepsTitle: '3 шага, чтобы забрать бонус 1win',
     stepsSubtitle: 'Минимум текста — максимум конкретики. Следуй по таймлайну.',
     step1: 'Шаг 1',
@@ -362,16 +37,12 @@ function switchLanguage(lang) {
     step3: 'Шаг 3',
     step3Title: 'Сделай первый депозит',
     step3Text: 'Пополни счёт удобным способом. В рамках текущей акции 1win начисляет до 500% бонусом к твоей сумме.',
-    
-    // Баннер
     bandLabel: 'Промокод 1win',
     bandTitle: 'Закрепи за собой бонус до 500%',
     bandText: 'Скопируй промокод, затем нажми на кнопку — промо останется в буфере и ты сразу сможешь вставить его на странице регистрации 1win.',
     bandCopy: 'Копировать',
     bandNote: 'Нажимая на кнопку, ты попадаешь на официальный сайт 1win по партнёрской ссылке.',
     bandBtn: 'Перейти на 1win',
-    
-    // Фичи
     detailsTitle: 'Что важно знать про бонус 1win',
     feature1Tag: 'Бонус',
     feature1Title: 'До 500% к депозиту',
@@ -385,12 +56,8 @@ function switchLanguage(lang) {
     feature4Tag: 'Ответственность',
     feature4Title: 'Азартные игры = риск',
     feature4Text: 'Не относись к 1win как к источнику дохода. Это азартная игра. Используй только те деньги, которые не жалко потерять, и ставь личные лимиты.',
-    
-    // Отзывы
     reviewsTitle: 'Мнения игроков из сети',
     reviewsSubtitle: 'Собрали типичные отзывы о 1win и стартовом бонусе через промо.',
-    
-    // FAQ
     faqTitle: 'FAQ по 1win и бонусе',
     faq1: 'Это официальный сайт 1win?',
     faq1a: 'Нет. Это промо-лендинг партнёра. Мы не принимаем платежи и не проводим игры. Все депозиты, ставки и бонусы проходят уже на официальном сайте 1win.',
@@ -400,14 +67,10 @@ function switchLanguage(lang) {
     faq3a: 'Обычно верификация требуется при выводе крупных сумм или по запросу 1win. Конкретные требования смотри в разделе «Помощь» / «Правила» на сайте 1win.',
     faq4: 'Какие риски?',
     faq4a: 'Азартные игры — это всегда риск потери денег. Не используй для депозита последние деньги, не занимай в долг, ставь личные лимиты и относись к 1win как к развлечению, а не к заработку.',
-    
-    // Кнопки
     copyBtn: 'Скопировать',
     copiedBtn: 'Скопировано',
     stickyBtn: 'Забрать бонус 1win',
     headerBtn: 'Забрать бонус',
-    
-    // Футер
     footerLogo: '1win Pulse',
     footerText: 'Этот сайт не является 1win, казино или букмекерской конторой. Мы не принимаем ставки и не организуем азартные игры. Здесь размещена промо-информация и ссылки на официальный сайт 1win.',
     footerWarning: '18+ Азартные игры могут вызывать зависимость. Играйте ответственно.',
@@ -423,8 +86,6 @@ function switchLanguage(lang) {
     cta2: 'How it works',
     tag: '18+ For adults only',
     timerText: 'Promotion active for:',
-    
-    // Right panel
     statsLabel: 'Live statistics',
     online: 'Online now on 1win',
     avgBonus: 'Average bonus',
@@ -435,8 +96,6 @@ function switchLanguage(lang) {
     quickTitle: 'Quick start',
     quickItems: ['Registration: 1–2 minutes', 'Promo code: activates bonus', 'Deposit: popular payment methods', 'Withdrawal: from a few minutes'],
     scroll: 'Scroll down',
-    
-    // Steps
     stepsTitle: '3 steps to get 1win bonus',
     stepsSubtitle: 'Minimum text — maximum specifics. Follow the timeline.',
     step1: 'Step 1',
@@ -448,16 +107,12 @@ function switchLanguage(lang) {
     step3: 'Step 3',
     step3Title: 'Make your first deposit',
     step3Text: 'Top up your account using a convenient method. Under the current promotion, 1win awards up to 500% as a bonus to your amount.',
-    
-    // Banner
     bandLabel: '1win Promo Code',
     bandTitle: 'Secure up to 500% bonus for yourself',
     bandText: 'Copy the promo code, then click the button — the promo will remain in the buffer and you can immediately paste it on the 1win registration page.',
     bandCopy: 'Copy',
     bandNote: 'By clicking the button, you go to the official 1win website via a partner link.',
     bandBtn: 'Go to 1win',
-    
-    // Features
     detailsTitle: 'What you should know about 1win bonus',
     feature1Tag: 'Bonus',
     feature1Title: 'Up to 500% to deposit',
@@ -471,12 +126,8 @@ function switchLanguage(lang) {
     feature4Tag: 'Responsibility',
     feature4Title: 'Gambling = risk',
     feature4Text: 'Do not treat 1win as a source of income. This is gambling. Use only money you can afford to lose and set personal limits.',
-    
-    // Reviews
     reviewsTitle: 'Player opinions from the web',
     reviewsSubtitle: 'Collected typical reviews about 1win and welcome bonus via promo.',
-    
-    // FAQ
     faqTitle: 'FAQ about 1win and bonus',
     faq1: 'Is this the official 1win website?',
     faq1a: 'No. This is a partner promo landing. We do not accept payments or conduct games. All deposits, bets and bonuses take place on the official 1win website.',
@@ -486,20 +137,113 @@ function switchLanguage(lang) {
     faq3a: 'Verification is usually required when withdrawing large amounts or upon 1win request. See specific requirements in the "Help" / "Rules" section on the 1win website.',
     faq4: 'What are the risks?',
     faq4a: 'Gambling always carries the risk of losing money. Do not use last money for deposit, do not borrow, set personal limits and treat 1win as entertainment, not as earnings.',
-    
-    // Buttons
     copyBtn: 'Copy',
     copiedBtn: 'Copied',
     stickyBtn: 'Get 1win bonus',
     headerBtn: 'Get bonus',
-    
-    // Footer
     footerLogo: '1win Pulse',
     footerText: 'This site is not 1win, casino or bookmaker. We do not accept bets or organize gambling. Promo information and links to the official 1win website are placed here.',
     footerWarning: '18+ Gambling can be addictive. Play responsibly.',
     footerLink: 'Back to top'
   }
 };
+
+function switchLanguage(lang) {
+  langBtns.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  
+  document.querySelectorAll('[data-ru][data-en]').forEach(el => {
+    el.textContent = el.dataset[lang];
+  });
+  
+  const t = translations[lang];
+  
+  // Update all texts
+  const elements = {
+    '.hero__eyebrow': t.eyebrow,
+    '.hero__title': t.title,
+    '.hero__subtitle': t.subtitle,
+    '.hero__promo-label': t.promoLabel,
+    '.hero__promo-hint': t.promoHint,
+    '#cta-main': t.cta1,
+    '.scroll-to-steps': t.cta2,
+    '.hero__tag': t.tag,
+    '.hero__timer': t.timerText + ' <span id="countdown">15:00</span>',
+    '.hero-panel__label': t.statsLabel,
+    '.hero-kpi__label:nth-child(1)': t.online,
+    '.hero-kpi__label:nth-child(2)': t.avgBonus,
+    '.hero-kpi__label:nth-child(3)': t.max,
+    '.hero-progress__top span:first-child': t.offer,
+    '.hero-progress__hint': t.hint,
+    '.hero-panel__mini-title': t.quickTitle,
+    '.hero-scroll span': t.scroll,
+    '#steps .section__title': t.stepsTitle,
+    '#steps .section__subtitle': t.stepsSubtitle,
+    '.timeline__step:nth-child(1)': t.step1,
+    '.timeline__step:nth-child(2)': t.step2,
+    '.timeline__step:nth-child(3)': t.step3,
+    '.timeline__title:nth-child(1)': t.step1Title,
+    '.timeline__title:nth-child(2)': t.step2Title,
+    '.timeline__title:nth-child(3)': t.step3Title,
+    '.timeline__text:nth-child(1)': t.step1Text,
+    '.timeline__text:nth-child(2)': t.step2Text,
+    '.timeline__text:nth-child(3)': t.step3Text,
+    '.band__label': t.bandLabel,
+    '.band__title': t.bandTitle,
+    '.band__text': t.bandText,
+    '#promo-band-copy': t.bandCopy,
+    '.band__note': t.bandNote,
+    '.band__btn': t.bandBtn,
+    '#details .section__title': t.detailsTitle,
+    '.feature-card__tag:nth-child(1)': t.feature1Tag,
+    '.feature-card__tag:nth-child(2)': t.feature2Tag,
+    '.feature-card__tag:nth-child(3)': t.feature3Tag,
+    '.feature-card__tag:nth-child(4)': t.feature4Tag,
+    '.feature-card__title:nth-child(1)': t.feature1Title,
+    '.feature-card__title:nth-child(2)': t.feature2Title,
+    '.feature-card__title:nth-child(3)': t.feature3Title,
+    '.feature-card__title:nth-child(4)': t.feature4Title,
+    '.feature-card__text:nth-child(1)': t.feature1Text,
+    '.feature-card__text:nth-child(2)': t.feature2Text,
+    '.feature-card__text:nth-child(3)': t.feature3Text,
+    '.feature-card__text:nth-child(4)': t.feature4Text,
+    '#reviews .section__title': t.reviewsTitle,
+    '#reviews .section__subtitle': t.reviewsSubtitle,
+    '#faq .section__title': t.faqTitle,
+    '.faq-item__question:nth-child(1)': t.faq1,
+    '.faq-item__question:nth-child(2)': t.faq2,
+    '.faq-item__question:nth-child(3)': t.faq3,
+    '.faq-item__question:nth-child(4)': t.faq4,
+    '.faq-item__answer p:nth-child(1)': t.faq1a,
+    '.faq-item__answer p:nth-child(2)': t.faq2a,
+    '.faq-item__answer p:nth-child(3)': t.faq3a,
+    '.faq-item__answer p:nth-child(4)': t.faq4a,
+    '.sticky-cta__btn': t.stickyBtn,
+    '.header__btn': t.headerBtn,
+    '.footer__logo': t.footerLogo,
+    '.footer__text': t.footerText,
+    '.footer__warning': t.footerWarning,
+    '.footer__link': t.footerLink
+  };
+  
+  for (const selector in elements) {
+    const el = document.querySelector(selector);
+    if (el) {
+      if (selector.includes('.hero__title') || selector.includes('.hero__timer')) {
+        el.innerHTML = elements[selector];
+      } else {
+        el.textContent = elements[selector];
+      }
+    }
+  }
+  
+  // Quick items list
+  document.querySelectorAll('.hero-panel__list li').forEach((li, i) => {
+    li.textContent = t.quickItems[i];
+  });
+  
+  localStorage.setItem('siteLang', lang);
 }
 
 langBtns.forEach(btn => {
@@ -510,5 +254,3 @@ langBtns.forEach(btn => {
 
 const savedLang = localStorage.getItem('siteLang') || 'ru';
 switchLanguage(savedLang);
-
-
