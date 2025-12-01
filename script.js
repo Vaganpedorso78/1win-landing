@@ -227,9 +227,103 @@ function switchLanguage(lang) {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
   
+  // Update navigation
   document.querySelectorAll('[data-ru][data-en]').forEach(el => {
     el.textContent = el.dataset[lang];
   });
+  
+  const t = translations[lang];
+  
+  // Hero section
+  document.querySelector('.hero__eyebrow').textContent = t.eyebrow;
+  document.querySelector('.hero__title').innerHTML = t.title;
+  document.querySelector('.hero__subtitle').textContent = t.subtitle;
+  document.querySelector('.hero__promo-label').textContent = t.promoLabel;
+  document.querySelector('.hero__promo-hint').textContent = t.promoHint;
+  document.querySelector('#cta-main').textContent = t.cta1;
+  document.querySelector('.scroll-to-steps').textContent = t.cta2;
+  document.querySelector('.hero__tag').textContent = t.tag;
+  document.querySelector('.hero__timer').innerHTML = t.timerText + ' <span id="countdown">15:00</span>';
+  
+  // Right panel
+  document.querySelector('.hero-panel__label').textContent = t.statsLabel;
+  document.querySelectorAll('.hero-kpi__label')[0].textContent = t.online;
+  document.querySelectorAll('.hero-kpi__label')[1].textContent = t.avgBonus;
+  document.querySelectorAll('.hero-kpi__label')[2].textContent = t.max;
+  document.querySelector('.hero-progress__top span:first-child').textContent = t.offer;
+  document.querySelector('.hero-progress__hint').textContent = t.hint;
+  document.querySelector('.hero-panel__mini-title').textContent = t.quickTitle;
+  document.querySelectorAll('.hero-panel__list li').forEach((li, i) => {
+    li.textContent = t.quickItems[i];
+  });
+  document.querySelector('.hero-scroll span').textContent = t.scroll;
+  
+  // Steps
+  document.querySelector('#steps .section__title').textContent = t.stepsTitle;
+  document.querySelector('#steps .section__subtitle').textContent = t.stepsSubtitle;
+  document.querySelectorAll('.timeline__step').forEach((el, i) => {
+    el.textContent = [t.step1, t.step2, t.step3][i];
+  });
+  document.querySelectorAll('.timeline__title').forEach((el, i) => {
+    el.textContent = [t.step1Title, t.step2Title, t.step3Title][i];
+  });
+  document.querySelectorAll('.timeline__text').forEach((el, i) => {
+    el.textContent = [t.step1Text, t.step2Text, t.step3Text][i];
+  });
+  
+  // Banner
+  document.querySelector('.band__label').textContent = t.bandLabel;
+  document.querySelector('.band__title').textContent = t.bandTitle;
+  document.querySelector('.band__text').textContent = t.bandText;
+  document.querySelector('#promo-band-copy').textContent = t.bandCopy;
+  document.querySelector('.band__note').textContent = t.bandNote;
+  document.querySelector('.band__btn').textContent = t.bandBtn;
+  
+  // Features
+  document.querySelector('#details .section__title').textContent = t.detailsTitle;
+  document.querySelectorAll('.feature-card__tag').forEach((el, i) => {
+    el.textContent = [t.feature1Tag, t.feature2Tag, t.feature3Tag, t.feature4Tag][i];
+  });
+  document.querySelectorAll('.feature-card__title').forEach((el, i) => {
+    el.textContent = [t.feature1Title, t.feature2Title, t.feature3Title, t.feature4Title][i];
+  });
+  document.querySelectorAll('.feature-card__text').forEach((el, i) => {
+    el.textContent = [t.feature1Text, t.feature2Text, t.feature3Text, t.feature4Text][i];
+  });
+  
+  // Reviews
+  document.querySelector('#reviews .section__title').textContent = t.reviewsTitle;
+  document.querySelector('#reviews .section__subtitle').textContent = t.reviewsSubtitle;
+  
+  // FAQ
+  document.querySelector('#faq .section__title').textContent = t.faqTitle;
+  document.querySelectorAll('.faq-item__question').forEach((el, i) => {
+    const text = [t.faq1, t.faq2, t.faq3, t.faq4][i];
+    el.childNodes[0].textContent = text;
+  });
+  document.querySelectorAll('.faq-item__answer p').forEach((el, i) => {
+    el.textContent = [t.faq1a, t.faq2a, t.faq3a, t.faq4a][i];
+  });
+  
+  // Buttons
+  document.querySelectorAll('#promo-main-copy, #promo-band-copy').forEach(btn => {
+    if (btn.textContent === 'Скопировано' || btn.textContent === 'Copied') {
+      btn.textContent = t.copiedBtn;
+    } else {
+      btn.textContent = t.copyBtn;
+    }
+  });
+  document.querySelector('.sticky-cta__btn').textContent = t.stickyBtn;
+  document.querySelector('.header__btn').textContent = t.headerBtn;
+  
+  // Footer
+  document.querySelector('.footer__logo').textContent = t.footerLogo;
+  document.querySelector('.footer__text').textContent = t.footerText;
+  document.querySelector('.footer__warning').textContent = t.footerWarning;
+  document.querySelector('.footer__link').textContent = t.footerLink;
+  
+  localStorage.setItem('siteLang', lang);
+}
   
   const translations = {
   ru: {
@@ -416,4 +510,5 @@ langBtns.forEach(btn => {
 
 const savedLang = localStorage.getItem('siteLang') || 'ru';
 switchLanguage(savedLang);
+
 
