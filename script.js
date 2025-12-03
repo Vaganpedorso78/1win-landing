@@ -392,3 +392,122 @@ bindPromoCopy('promo-band', 'promo-band-copy');
   });
 })();
 
+// Эффект заморозки для кнопки Telegram
+(function initFreezeEffect() {
+  const freezeBtns = document.querySelectorAll('.freeze-btn');
+  
+  if (!freezeBtns.length) return;
+  
+  freezeBtns.forEach(btn => {
+    // Создаем частицы льда
+    const createIceParticles = () => {
+      const particles = document.createElement('div');
+      particles.className = 'ice-particles';
+      particles.style.cssText = `
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 2;
+        overflow: hidden;
+        border-radius: inherit;
+      `;
+      
+      // Добавляем частицы льда
+      for (let i = 0; i < 12; i++) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+          position: absolute;
+          width: 4px;
+          height: 4px;
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 50%;
+          filter: blur(1px);
+          animation: ice-particle-float 1.5s ease-out forwards;
+        `;
+        
+        // Случайная позиция
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        particle.style.left = `${x}%`;
+        particle.style.top = `${y}%`;
+        particle.style.animationDelay = `${Math.random() * 0.5}s`;
+        
+        particles.appendChild(particle);
+      }
+      
+      btn.appendChild(particles);
+      
+      // Удаляем частицы после анимации
+      setTimeout(() => {
+        if (particles.parentNode === btn) {
+          btn.removeChild(particles);
+        }
+      }, 1500);
+    };
+    
+    // Обработчики событий
+    btn.addEventListener('mouseenter', (e) => {
+      if (btn.getAttribute('data-freeze') === 'true') {
+        createIceParticles();
+        
+        // Добавляем класс для анимации
+        btn.classList.add('freezing');
+        
+        // Звуковой эффект (опционально)
+        try {
+          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          
+          oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+          oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.3);
+          
+          gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+          
+          oscillator.start();
+          oscillator.stop(audioContext.currentTime + 0.3);
+        } catch (e) {
+          console.log('Audio context not supported');
+        }
+      }
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+      btn.classList.remove('freezing');
+    });
+  });
+  
+  // Добавляем CSS для частиц льда
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes ice-particle-float {
+      0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 0;
+      }
+      20% {
+        transform: translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(${Math.random() * 40 - 20}px, ${Math.random() * 40 - 20}px) scale(0);
+        opacity: 0;
+      }
+    }
+    
+    .freezing {
+      animation: freezing-shake 0.5s ease-in-out;
+    }
+    
+    @keyframes freezing-shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-2px); }
+      75% { transform: translateX(2px); }
+    }
+  `;
+  document.head.appendChild(style);
+})();
