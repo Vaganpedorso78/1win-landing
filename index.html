@@ -1,595 +1,480 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>1win 500% Bonus | Эксклюзивное предложение</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Эксклюзивный бонус до 500% на депозит для новых игроков 1win. Современный лендинг с промокодом и быстрым стартом.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1WIN - Бонус 500% на первый депозит</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bg-layer"></div>
-
-<header class="header">
-  <div class="container header__inner">
-    <div class="logo">
-      <span class="logo__mark"></span>
-      <span class="logo__text">1win Pulse</span>
-    </div>
-    <nav class="nav">
-      <a href="#steps" class="nav__link">Как начать</a>
-      <a href="#details" class="nav__link">О бонусе</a>
-      <a href="#reviews" class="nav__link">Отзывы</a>
-      <a href="#faq" class="nav__link">FAQ</a>
-    </nav>
+    <!-- Фоновый слой -->
+    <div class="bg-layer"></div>
     
-    <div class="lang-simple">
-      <span style="color:#22d3ee; font-size:13px; font-weight:500;">RU</span>
-      <span style="color:#666; margin:0 6px;">|</span>
-      <a href="en.html" style="color:#9ca3c7; font-size:13px; text-decoration:none;">EN</a>
-    </div>
-    
-    <a href="#cta" class="header__btn btn btn--outline">Забрать бонус</a>
-    <button class="burger" id="burger">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="container hero__grid">
-      <div class="hero__left reveal">
-        <p class="hero__eyebrow">Партнёрское промо-предложение 1win</p>
-        <h1 class="hero__title">
-          До <span class="hero__accent">500% на первый депозит</span>
-          для новых игроков 1win
-        </h1>
-        <p class="hero__subtitle">
-          Современная платформа 1win с бонусом до 500% на старт.
-          Короткая регистрация, промокод и быстрый депозит — всё в одном месте.
-        </p>
-
-        <div class="hero__promo">
-          <p class="hero__promo-label">Промокод 1win</p>
-          <div class="hero__promo-row">
-            <input type="text" id="promo-main" class="hero__promo-code" value="PORNO52" readonly>
-            <button class="btn btn--ghost hero__promo-copy" id="promo-main-copy">Скопировать</button>
-          </div>
-          <p class="hero__promo-hint">
-            Скопируй промокод, введи его при регистрации и следуй инструкциям ниже.
-          </p>
-        </div>
-
-        <div class="hero__actions">
-          <a href="https://1walxy.life/casino/list?open=register&p=vhro" class="btn btn--primary" id="cta-main">
-            Перейти на 1win
-          </a>
-          <button class="btn btn--ghost scroll-to-steps">Как это работает</button>
-        </div>
-
-        <div class="hero__meta">
-          <span class="hero__tag">18+ Только для совершеннолетних</span>
-          <span class="hero__timer">Акция активна ещё: <span id="countdown">15:00</span></span>
-        </div>
-      </div>
-
-      <div class="hero__right reveal">
-        <div class="hero-panel hero-panel--main">
-          <div class="hero-panel__header">
-            <p class="hero-panel__label">Live статистика</p>
-            <span class="hero-dot hero-dot--live"></span>
-          </div>
-          <div class="hero-panel__stats">
-            <div class="hero-kpi">
-              <p class="hero-kpi__label">Сейчас на 1win</p>
-              <p class="hero-kpi__value" id="kpi-online">1 247</p>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <div class="logo-icon">1WIN</div>
+                    <span class="logo-text">Pulse</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="#steps" class="nav-link">Как начать</a>
+                    <a href="#bonus" class="nav-link">О бонусе</a>
+                    <a href="#slots" class="nav-link">Слоты</a>
+                    <a href="#reviews" class="nav-link">Отзывы</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </nav>
+                
+                <div class="header-right">
+                    <div class="lang-switch">
+                        <a href="index.html" class="lang-active">RU</a>
+                        <span class="lang-divider">|</span>
+                        <a href="en.html">EN</a>
+                    </div>
+                    <a href="#cta" class="btn btn-header">Получить бонус</a>
+                </div>
+                
+                <button class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="hero-kpi">
-              <p class="hero-kpi__label">Средний бонус</p>
-              <p class="hero-kpi__value hero-kpi__value--accent">340%</p>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Герой-секция -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-left">
+                        <div class="hero-badge">Эксклюзивное предложение</div>
+                        <h1 class="hero-title">
+                            Получи <span class="gradient-text">до 500% бонус</span><br>
+                            на первый депозит 1WIN
+                        </h1>
+                        <p class="hero-subtitle">
+                            Зарегистрируйся с промокодом и получи максимальный бонус<br>
+                            на старте. Быстро, просто, без скрытых условий.
+                        </p>
+                        
+                        <!-- Промокод блок -->
+                        <div class="promo-block">
+                            <div class="promo-label">Твой промокод:</div>
+                            <div class="promo-input-group">
+                                <input type="text" class="promo-input" value="WIN500" readonly>
+                                <button class="btn btn-copy" id="copyPromo">Скопировать</button>
+                            </div>
+                            <p class="promo-hint">Скопируй код и вставь при регистрации на 1WIN</p>
+                        </div>
+                        
+                        <!-- Кнопки действий -->
+                        <div class="hero-actions">
+                            <a href="https://1win.com" class="btn btn-primary">Получить бонус 500%</a>
+                            <a href="#steps" class="btn btn-secondary">Как это работает?</a>
+                        </div>
+                        
+                        <!-- Дополнительная информация -->
+                        <div class="hero-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Акция действует:</span>
+                                <span class="meta-value timer">15:00</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">18+</span>
+                                <span class="meta-value">Играйте ответственно</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Правая часть с статистикой -->
+                    <div class="hero-right">
+                        <div class="stats-card">
+                            <div class="stats-header">
+                                <h3>📈 Живая статистика</h3>
+                                <div class="live-indicator">
+                                    <span class="live-dot"></span>
+                                    <span>LIVE</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stats-grid">
+                                <div class="stat">
+                                    <div class="stat-number">1,247</div>
+                                    <div class="stat-label">играют сейчас</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number gradient-text">340%</div>
+                                    <div class="stat-label">средний бонус</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">500%</div>
+                                    <div class="stat-label">максимум</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Прогресс бар -->
+                            <div class="progress-block">
+                                <div class="progress-header">
+                                    <span>Доступно бонусов</span>
+                                    <span>78% осталось</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%"></div>
+                                </div>
+                                <p class="progress-hint">Ограниченное предложение, успей получить</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Блок быстрого старта -->
+                        <div class="quick-start">
+                            <h4>🚀 Быстрый старт</h4>
+                            <ul>
+                                <li>Регистрация за 2 минуты</li>
+                                <li>Ввод промокода при регистрации</li>
+                                <li>Депозит от 100₽</li>
+                                <li>Вывод от 15 минут</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-kpi">
-              <p class="hero-kpi__label">Максимум</p>
-              <p class="hero-kpi__value">500%</p>
+        </section>
+
+        <!-- Новогодний Telegram баннер -->
+        <section class="telegram-banner">
+            <div class="container">
+                <div class="tg-banner">
+                    <div class="tg-content">
+                        <div class="tg-icon">🎄</div>
+                        <div class="tg-text">
+                            <h2>Новогодние промокоды в Telegram</h2>
+                            <p>Эксклюзивные бонусы, розыгрыши и специальные предложения</p>
+                            <div class="tg-stats">
+                                <span>🔥 500+ промокодов</span>
+                                <span>⚡ Мгновенные уведомления</span>
+                                <span>🎁 Бесплатные бонусы</span>
+                            </div>
+                        </div>
+                        <a href="https://t.me/your_channel" class="btn btn-tg" target="_blank">
+                            Подписаться на канал
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="hero-progress">
-            <div class="hero-progress__top">
-              <span>Спецпредложение</span>
-              <span id="hero-left-label">Осталось 78%</span>
+        </section>
+
+        <!-- Шаги получения бонуса -->
+        <section class="steps-section" id="steps">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🎯 3 простых шага к бонусу 500%</h2>
+                    <p>Минимум действий — максимум результата</p>
+                </div>
+                
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Нажми "Получить бонус"</h3>
+                        <p>Перейди на официальный сайт 1WIN по нашей ссылке</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Введи промокод</h3>
+                        <p>Скопируй промокод WIN500 и вставь при регистрации</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Пополни счет</h3>
+                        <p>Сделай первый депозит и получи бонус до 500%</p>
+                    </div>
+                </div>
             </div>
-            <div class="hero-progress__bar">
-              <span class="hero-progress__fill" id="hero-progress"></span>
+        </section>
+
+        <!-- Информация о бонусе -->
+        <section class="bonus-section" id="bonus">
+            <div class="container">
+                <div class="section-header">
+                    <h2>💰 Все о бонусе 1WIN</h2>
+                    <p>Прозрачные условия и важные детали</p>
+                </div>
+                
+                <div class="bonus-grid">
+                    <div class="bonus-card">
+                        <div class="bonus-icon">💎</div>
+                        <h3>До 500% к депозиту</h3>
+                        <p>Максимальный бонус на первый депозит. Сумма зависит от размера пополнения.</p>
+                    </div>
+                    
+                    <div class="bonus-card">
+                        <div class="bonus-icon">⚡</div>
+                        <h3>Моментальное зачисление</h3>
+                        <p>Бонус зачисляется сразу после пополнения счета. Без задержек и ожиданий.</p>
+                    </div>
+                    
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🔄</div>
+                        <h3>Прозрачные условия</h3>
+                        <p>Все условия отыгрыша указаны на сайте 1WIN. Никаких скрытых требований.</p>
+                    </div>
+                    
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🛡️</div>
+                        <h3>Безопасность</h3>
+                        <p>Официальный сайт 1WIN. Лицензия, SSL-шифрование, защита данных.</p>
+                    </div>
+                </div>
             </div>
-            <p class="hero-progress__hint">
-              Данные по активной акции 1win обновляются в реальном времени.
-            </p>
-          </div>
-        </div>
+        </section>
 
-        <div class="hero-panel hero-panel--side">
-          <p class="hero-panel__mini-title">Быстрый старт</p>
-          <ul class="hero-panel__list">
-            <li>Регистрация: 1–2 минуты</li>
-            <li>Промокод: активирует бонус</li>
-            <li>Пополнение: популярные платёжные методы</li>
-            <li>Вывод: от нескольких минут</li>
-          </ul>
+        <!-- Горячие слоты -->
+        <section class="slots-section" id="slots">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🎮 Горячие слоты прямо сейчас</h2>
+                    <p>На этих играх выигрывают чаще всего</p>
+                </div>
+                
+                <div class="slots-grid">
+                    <!-- Слот 1 -->
+                    <div class="slot-card">
+                        <div class="slot-badge vip">VIP</div>
+                        <div class="slot-icon">🎰</div>
+                        <h3>Gates of Olympus</h3>
+                        <div class="slot-stats">
+                            <span>🔥 2 джекпота сегодня</span>
+                            <span>💰 x5000 множитель</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                    
+                    <!-- Слот 2 -->
+                    <div class="slot-card">
+                        <div class="slot-badge hit">ХИТ</div>
+                        <div class="slot-icon">🍬</div>
+                        <h3>Sweet Bonanza</h3>
+                        <div class="slot-stats">
+                            <span>🎯 Частые бонусы</span>
+                            <span>💰 До x21,100</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                    
+                    <!-- Слот 3 -->
+                    <div class="slot-card">
+                        <div class="slot-badge new">НОВИНКА</div>
+                        <div class="slot-icon">👸</div>
+                        <h3>Starlight Princess</h3>
+                        <div class="slot-stats">
+                            <span>💫 x5,000 множитель</span>
+                            <span>🎮 Высокая RTP</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                    
+                    <!-- Слот 4 -->
+                    <div class="slot-card">
+                        <div class="slot-badge">💎</div>
+                        <div class="slot-icon">💎</div>
+                        <h3>Bonanza Billion</h3>
+                        <div class="slot-stats">
+                            <span>🚀 Мега-выигрыши</span>
+                            <span>💰 Бонус-игры</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                    
+                    <!-- Слот 5 -->
+                    <div class="slot-card">
+                        <div class="slot-badge">⚡</div>
+                        <div class="slot-icon">⚡</div>
+                        <h3>Money Train 3</h3>
+                        <div class="slot-stats">
+                            <span>🎯 97% RTP</span>
+                            <span>💰 Высокая волатильность</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                    
+                    <!-- Слот 6 -->
+                    <div class="slot-card">
+                        <div class="slot-badge">🔥</div>
+                        <div class="slot-icon">🔥</div>
+                        <h3>Fire in the Hole</h3>
+                        <div class="slot-stats">
+                            <span>💥 Взрывные множители</span>
+                            <span>💰 До x25,000</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                    
+                    <!-- Слот 7 -->
+                    <div class="slot-card">
+                        <div class="slot-badge">🍭</div>
+                        <div class="slot-icon">🍭</div>
+                        <h3>Sugar Rush</h3>
+                        <div class="slot-stats">
+                            <span>🍬 Сладкие бонусы</span>
+                            <span>💰 До x5,000</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                    
+                    <!-- Слот 8 -->
+                    <div class="slot-card">
+                        <div class="slot-badge">👑</div>
+                        <div class="slot-icon">👑</div>
+                        <h3>Big Bass Bonanza</h3>
+                        <div class="slot-stats">
+                            <span>🎣 Рыбалка на кэш</span>
+                            <span>💰 Частые выигрыши</span>
+                        </div>
+                        <button class="btn btn-slot">Играть</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📢 Отзывы игроков</h2>
+                    <p>Реальные мнения о бонусе 1WIN</p>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <p class="review-text">"Получил бонус 500%, все честно. Главное — читать условия отыгрыша."</p>
+                        <div class="review-author">
+                            <span class="author-name">@alex_winner</span>
+                            <span class="author-tag">ставки + live</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <p class="review-text">"Интерфейс удобный, вывод быстрый. Бонус помог протестировать стратегии."</p>
+                        <div class="review-author">
+                            <span class="author-name">@casino_pro</span>
+                            <span class="author-tag">опыт 2 года</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <p class="review-text">"Не воспринимайте как бесплатные деньги. Но для старта — отличный вариант."</p>
+                        <div class="review-author">
+                            <span class="author-name">@smart_gambler</span>
+                            <span class="author-tag">ответственная игра</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>❓ Частые вопросы</h2>
+                    <p>Всё, что нужно знать о бонусе</p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Это официальный сайт 1WIN?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Нет, это партнёрский промо-сайт. Мы предоставляем информацию и ссылки на официальный сайт 1WIN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Бонус 500% получают все?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Размер бонуса зависит от суммы депозита и актуальных условий на сайте 1WIN. Максимальный бонус — до 500%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Какие документы нужны для вывода?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Обычно паспорт или водительские права. Конкретные требования смотрите в разделе "Верификация" на 1WIN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Сколько времени занимает вывод?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>От 15 минут до 24 часов, зависит от выбранного метода и суммы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA блок -->
+        <section class="cta-section" id="cta">
+            <div class="container">
+                <div class="cta-block">
+                    <h2>Не упусти свой шанс!</h2>
+                    <p>Бонус до 500% доступен только новым игрокам. Действуй сейчас!</p>
+                    
+                    <div class="cta-promo">
+                        <input type="text" class="cta-input" value="WIN500" readonly>
+                        <button class="btn btn-primary btn-large">Забрать бонус →</button>
+                    </div>
+                    
+                    <p class="cta-note">Нажимая кнопку, вы переходите на официальный сайт 1WIN</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">1WIN Pulse</div>
+                    <p class="footer-text">
+                        Этот сайт не является официальным сайтом 1WIN. Мы предоставляем информацию 
+                        о промо-предложениях и бонусах. Все азартные игры проходят на официальном сайте 1WIN.
+                    </p>
+                </div>
+                
+                <div class="footer-warning">
+                    <p>⚠️ 18+ | Азартные игры могут вызывать зависимость. Играйте ответственно.</p>
+                    <p>Не играйте на последние деньги. Устанавливайте лимиты по времени и деньгам.</p>
+                </div>
+                
+                <a href="#" class="footer-top">↑ Наверх</a>
+            </div>
         </div>
-      </div>
+    </footer>
+
+    <!-- Стики кнопка для мобильных -->
+    <div class="sticky-cta">
+        <a href="#cta" class="btn btn-primary">Получить бонус 500%</a>
     </div>
 
-    <!-- Скролл-индикатор -->
-    <button class="hero-scroll scroll-to-steps">
-      <span>Листай вниз</span>
-      <div class="hero-scroll__circle"></div>
-    </button>
-  </section>
-
-  <!-- НОВОГОДНИЙ TELEGRAM БАННЕР -->
-  <div class="newyear-tg-banner" id="telegram-banner">
-    <div class="snow-overlay"></div>
-    <div class="newyear-content">
-      <div class="newyear-left">
-        <div class="newyear-icon">
-          <div class="snowflake">❄️</div>
-          <div class="gift-icon">🎁</div>
-          <div class="tg-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.655-.48.882-1.025.55l-2.81-2.07-1.455 1.37c-.16.16-.295.295-.605.295l.213-3.05 5.16-4.66c.211-.19-.046-.295-.33-.107l-6.387 4.02-2.76-.86c-.6-.188-.614-.6.126-.882l10.826-4.17c.5-.16.94.12.78.882z"/>
-            </svg>
-          </div>
-        </div>
-        <div class="newyear-text">
-          <h3 class="newyear-title">🎅 НОВОГОДНИЙ <span class="gradient-xmas">TELEGRAM</span></h3>
-          <p class="newyear-desc">Эксклюзивные промокоды, розыгрыши и подарки!</p>
-          <div class="newyear-stats">
-            <span class="stat-item">🎁 500+ промокодов</span>
-            <span class="stat-item">💰 Бесплатные спины</span>
-            <span class="stat-item">🎄 Новогодние бонусы</span>
-          </div>
-        </div>
-      </div>
-      <a href="https://t.me/+8GPvzTx1J3I4OGUy" class="newyear-btn freeze-btn" target="_blank" data-freeze="true">
-        <span class="btn-text">Получить подарки</span>
-        <div class="btn-sparkles">
-          <span class="sparkle">✨</span>
-          <span class="sparkle">✨</span>
-          <span class="sparkle">✨</span>
-        </div>
-        <div class="ice-overlay"></div>
-      </a>
-    </div>
-    <div class="lights-string"></div>
-  </div>
-
-  <!-- STEPS (timeline) -->
-  <section class="section section--soft" id="steps">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">3 шага, чтобы забрать бонус 1win</h2>
-        <p class="section__subtitle">
-          Минимум текста — максимум конкретики. Следуй по таймлайну.
-        </p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline__item reveal">
-          <div class="timeline__point"></div>
-          <div class="timeline__content">
-            <p class="timeline__step">Шаг 1</p>
-            <h3 class="timeline__title">Перейди по кнопке на 1win</h3>
-            <p class="timeline__text">
-              Нажми «Перейти на 1win», чтобы открыть официальную страницу регистрации
-              с актуальной акцией под твой регион.
-            </p>
-          </div>
-        </div>
-        <div class="timeline__item reveal">
-          <div class="timeline__point"></div>
-          <div class="timeline__content">
-            <p class="timeline__step">Шаг 2</p>
-            <h3 class="timeline__title">Введи промокод при регистрации</h3>
-            <p class="timeline__text">
-              Скопируй промокод с этого сайта и вставь его в поле промокода/акции на 1win —
-              так ты привязываешь к себе бонус.
-            </p>
-          </div>
-        </div>
-        <div class="timeline__item reveal">
-          <div class="timeline__point"></div>
-          <div class="timeline__content">
-            <p class="timeline__step">Шаг 3</p>
-            <h3 class="timeline__title">Сделай первый депозит</h3>
-            <p class="timeline__text">
-              Пополни счёт удобным способом. В рамках текущей акции 1win начисляет
-              до 500% бонусом к твоей сумме.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROMO BAND -->
-  <section class="section section--band" id="cta">
-    <div class="container band reveal">
-      <div class="band__left">
-        <p class="band__label">Промокод 1win</p>
-        <h2 class="band__title">Закрепи за собой бонус до 500%</h2>
-        <p class="band__text">
-          Скопируй промокод, затем нажми на кнопку — промо останется в буфере и ты сразу
-          сможешь вставить его на странице регистрации 1win.
-        </p>
-        <div class="band__promo">
-          <input type="text" id="promo-band" class="band__promo-code" value="PORNO52" readonly>
-          <button class="btn btn--outline band__promo-copy" id="promo-band-copy">Копировать</button>
-        </div>
-      </div>
-      <div class="band__right">
-        <a href="https://1walxy.life/casino/list?open=register&p=vhro" class="btn btn--primary btn--big band__btn">
-          Перейти на 1win
-        </a>
-        <p class="band__note">
-          Нажимая на кнопку, ты попадаешь на официальный сайт 1win по партнёрской ссылке.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DETAILS / FEATURES -->
-  <section class="section" id="details">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">Что важно знать про бонус 1win</h2>
-      </div>
-      <div class="grid-features">
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Бонус</p>
-          <h3 class="feature-card__title">До 500% к депозиту</h3>
-          <p class="feature-card__text">
-            Размер бонуса зависит от суммы пополнения и условий акции. Ты видишь актуальные
-            цифры уже на стороне 1win при регистрации.
-          </p>
-        </article>
-
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Прозрачность</p>
-          <h3 class="feature-card__title">Условия на стороне 1win</h3>
-          <p class="feature-card__text">
-            Все нюансы по отыгрышу, коэффициентам, лимитам и ограничениям указаны
-            прямо на официальном сайте 1win. Мы их не меняем.
-          </p>
-        </article>
-
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Скорость</p>
-          <h3 class="feature-card__title">Регистрация и вывод</h3>
-          <p class="feature-card__text">
-            Обычно регистрация занимает 1–2 минуты, а вывод при соблюдении условий —
-            от нескольких минут до часа, в зависимости от метода.
-          </p>
-        </article>
-
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Ответственность</p>
-          <h3 class="feature-card__title">Азартные игры = риск</h3>
-          <p class="feature-card__text">
-            Не относись к 1win как к источнику дохода. Это азартная игра. Используй только те деньги,
-            которые не жалко потерять, и ставь личные лимиты.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="section section--soft" id="reviews">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">Мнения игроков из сети</h2>
-        <p class="section__subtitle">
-          Собрали типичные отзывы о 1win и стартовом бонусе через промо.
-        </p>
-      </div>
-
-      <div class="reviews-slider">
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            «Залетел через промокод, бонус прилетел сразу после депозита. Главное — не игнорить условия,
-            тогда никаких сюрпризов».
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@win***</span>
-            <span class="review-card__tag">ставки + live</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            «500% — это громко звучит, но в целом бонус норм, если не считать его "бесплатными деньгами",
-            а использовать с головой».
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@pro***</span>
-            <span class="review-card__tag">опыт 1 год</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            «Интерфейс у 1win приятный, депы и выводы не тормозят. Бонус помогает протестить площадку
-            с меньшим риском».
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@play***</span>
-            <span class="review-card__tag">казино + слоты</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            «Не воспринимайте бонус как способ "поднять с нуля". Играй как в развлечение, и все будет ок».
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@cas***</span>
-            <span class="review-card__tag">ответственная игра</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">FAQ по 1win и бонусу</h2>
-      </div>
-      <div class="faq reveal">
-        <div class="faq-item">
-          <button class="faq-item__question">
-            Это официальный сайт 1win?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              Нет. Это промо-лендинг партнёра. Мы не принимаем платежи и не проводим игры.
-              Все депозиты, ставки и бонусы проходят уже на официальном сайте 1win.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-item__question">
-            Бонус 500% выдается всем?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              Размер бонуса зависит от текущей акции на 1win, суммы депозита, региона и промокода.
-              Актуальные условия всегда указаны на сайте 1win в момент регистрации.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-item__question">
-            Нужна ли верификация?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              Обычно верификация требуется при выводе крупных сумм или по запросу 1win.
-              Конкретные требования смотри в разделе «Помощь» / «Правила» на сайте 1win.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-item__question">
-            Какие риски?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              Азартные игры — это всегда риск потери денег. Не используй для депозита
-              последние деньги, не занимай в долг, ставь личные лимиты и относись к 1win
-              как к развлечению, а не к заработку.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hot Slots Live -->
-  <section class="hot-slots-section">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">🎮 Горячие слоты прямо сейчас</h2>
-        <p class="section__subtitle">На этих играх прямо сейчас выигрывают. Выбирай и заходи!</p>
-      </div>
-      
-      <div class="hot-slots-grid">
-        <!-- King's Thimbles (VIP) -->
-        <div class="hot-slot-card hot-slot-vip">
-          <div class="slot-badge">👑 VIP</div>
-          <div class="slot-icon">🎰</div>
-          <h3 class="slot-title">King's Thimbles</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🔥 3 выигрыша за 5 мин</span>
-            <span class="slot-stat">💰 До x100</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 12 человек играют</span>
-          </div>
-          <button class="slot-play-btn" data-game="kings-thimbles">Играть сейчас</button>
-        </div>
-        
-        <!-- Chicken Road (Хит) -->
-        <div class="hot-slot-card hot-slot-hit">
-          <div class="slot-badge">🐔 ХИТ</div>
-          <div class="slot-icon">🥚</div>
-          <h3 class="slot-title">Chicken Road</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">⚡ x47 только что</span>
-            <span class="slot-stat">🏆 Высокая RTP</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 8 человек играют</span>
-          </div>
-          <button class="slot-play-btn" data-game="chicken-road">Играть сейчас</button>
-        </div>
-        
-        <!-- Mines (Риск) -->
-        <div class="hot-slot-card hot-slot-risk">
-          <div class="slot-badge">💣 РИСК</div>
-          <div class="slot-icon">⚡</div>
-          <h3 class="slot-title">Mines</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">💎 +25к недавно</span>
-            <span class="slot-stat">🎯 87% win rate</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 15 человек играют</span>
-          </div>
-          <button class="slot-play-btn" data-game="mines">Играть сейчас</button>
-        </div>
-        
-        <!-- Gates of Olympus -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">⚡</div>
-          <div class="slot-icon">⚡</div>
-          <h3 class="slot-title">Gates of Olympus</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">✨ 2 джекпота сегодня</span>
-            <span class="slot-stat">🎰 Классика</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 21 человек играет</span>
-          </div>
-          <button class="slot-play-btn" data-game="gates">Играть сейчас</button>
-        </div>
-        
-        <!-- Sweet Bonanza -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">🍬</div>
-          <div class="slot-icon">🍬</div>
-          <h3 class="slot-title">Sweet Bonanza</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🎯 Частые бонусы</span>
-            <span class="slot-stat">💰 До x21,100</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 18 человек играет</span>
-          </div>
-          <button class="slot-play-btn" data-game="sweet">Играть сейчас</button>
-        </div>
-        
-        <!-- Sugar Rush -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">🍭</div>
-          <div class="slot-icon">🍭</div>
-          <h3 class="slot-title">Sugar Rush</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🔥 Новинка</span>
-            <span class="slot-stat">⭐ Высокий RTP</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 14 человек играет</span>
-          </div>
-          <button class="slot-play-btn" data-game="sugar">Играть сейчас</button>
-        </div>
-        
-        <!-- Starlight Princess -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">🌟</div>
-          <div class="slot-icon">👸</div>
-          <h3 class="slot-title">Starlight Princess</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">💫 x5,000 множитель</span>
-            <span class="slot-stat">🎮 Увлекательно</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 9 человек играет</span>
-          </div>
-          <button class="slot-play-btn" data-game="starlight">Играть сейчас</button>
-        </div>
-        
-        <!-- Bonanza Billion -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">💎</div>
-          <div class="slot-icon">💎</div>
-          <h3 class="slot-title">Bonanza Billion</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🚀 Мега-выигрыши</span>
-            <span class="slot-stat">💰 Бонус-игры</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 11 человек играет</span>
-          </div>
-          <button class="slot-play-btn" data-game="bonanza">Играть сейчас</button>
-        </div>
-      </div>
-      
-      <div class="hot-slots-note">
-        <p>🎯 <strong>Совет:</strong> King's Thimbles даёт самые частые выигрыши прямо сейчас</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- MOBILE STICKY CTA -->
-<div class="sticky-cta">
-  <a href="https://1walxy.life/casino/list?open=register&p=vhro" class="sticky-cta__btn">
-    Забрать бонус 1win
-  </a>
-</div>
-
-<footer class="footer">
-  <div class="container footer__inner">
-    <div>
-      <p class="footer__logo">1win Pulse</p>
-      <p class="footer__text">
-        Этот сайт не является 1win, казино или букмекерской конторой. Мы не принимаем ставки и
-        не организуем азартные игры. Здесь размещена промо-информация и ссылки на официальный сайт 1win.
-      </p>
-    </div>
-    <div class="footer__meta">
-      <p class="footer__warning">18+ Азартные игры могут вызывать зависимость. Играйте ответственно.</p>
-      <a href="#top" class="footer__link">Вернуться наверх</a>
-    </div>
-  </div>
-</footer>
-
-<!-- Money Piggy Bank -->
-<div class="money-piggy">
-  <div class="piggy-container">
-    <div class="piggy-icon">💰</div>
-    <div class="piggy-stats">
-      <div class="piggy-total" id="piggy-total">1,247,850₽</div>
-      <div class="piggy-label">Выиграно на сайте</div>
-    </div>
-    <div class="piggy-coins">
-      <span class="coin">🪙</span>
-      <span class="coin">🪙</span>
-      <span class="coin">🪙</span>
-    </div>
-  </div>
-  <button class="piggy-btn" id="piggy-btn">💎</button>
-</div>
-
-<!-- Money Rain Effect -->
-<div class="money-rain"></div>
-
-<!-- Site Aura -->
-<div class="site-aura"></div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
