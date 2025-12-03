@@ -391,3 +391,89 @@ bindPromoCopy('promo-band', 'promo-band-copy');
     lastScrollY = window.scrollY;
   });
 })();
+
+// Telegram Banner Interactive Effects
+(function initTelegramBanner() {
+  const banner = document.getElementById('tg-banner');
+  const closeBtn = document.getElementById('tg-close');
+  const onlineCounter = document.getElementById('tg-online');
+  
+  if (!banner || !closeBtn) return;
+  
+  // Close button
+  closeBtn.addEventListener('click', () => {
+    banner.style.transform = 'scale(0.8)';
+    banner.style.opacity = '0';
+    
+    setTimeout(() => {
+      banner.style.display = 'none';
+      localStorage.setItem('tgBannerClosed', 'true');
+    }, 300);
+  });
+  
+  // Check if previously closed
+  if (localStorage.getItem('tgBannerClosed') === 'true') {
+    banner.style.display = 'none';
+  }
+  
+  // Mouse tracking for glow effect
+  banner.addEventListener('mousemove', (e) => {
+    const rect = banner.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    
+    banner.style.setProperty('--mouse-x', x + '%');
+    banner.style.setProperty('--mouse-y', y + '%');
+  });
+  
+  // Online counter animation
+  if (onlineCounter) {
+    let count = 247;
+    let target = 247 + Math.floor(Math.random() * 50);
+    
+    function updateCounter() {
+      if (count < target) {
+        count += Math.floor(Math.random() * 3) + 1;
+        if (count > target) count = target;
+      } else {
+        target = 247 + Math.floor(Math.random() * 50);
+      }
+      
+      onlineCounter.textContent = count;
+      
+      // Pulse animation
+      onlineCounter.style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        onlineCounter.style.transform = 'scale(1)';
+      }, 150);
+    }
+    
+    // Update every 30-60 seconds
+    setInterval(updateCounter, 30000 + Math.random() * 30000);
+  }
+  
+  // Auto-hide after 30 seconds of inactivity
+  let hideTimeout;
+  function resetHideTimer() {
+    clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => {
+      banner.style.opacity = '0.5';
+      setTimeout(() => {
+        banner.style.opacity = '1';
+      }, 1000);
+    }, 30000);
+  }
+  
+  // Reset timer on interaction
+  banner.addEventListener('mouseenter', resetHideTimer);
+  banner.addEventListener('click', resetHideTimer);
+  resetHideTimer();
+  
+  // Random particle effects
+  setInterval(() => {
+    const particles = document.querySelectorAll('.tg-particle');
+    particles.forEach(particle => {
+      particle.style.background = `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, 0.6)`;
+    });
+  }, 3000);
+})();
