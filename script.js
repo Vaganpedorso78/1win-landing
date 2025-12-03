@@ -176,3 +176,118 @@ bindPromoCopy('promo-band', 'promo-band-copy');
   }
 })();
 
+// Money Piggy Bank
+(function initPiggyBank() {
+  const piggyTotal = document.getElementById('piggy-total');
+  const piggyBtn = document.getElementById('piggy-btn');
+  const moneyRain = document.querySelector('.money-rain');
+  
+  if (!piggyTotal || !piggyBtn) return;
+  
+  let totalAmount = 1247850; // Начальная сумма
+  let todayAmount = 0;
+  const todayWins = [18500, 12300, 25000, 15750, 9800, 32500, 14200];
+  
+  // Функция форматирования числа
+  function formatNumber(num, isEnglish = false) {
+    if (isEnglish) {
+      return '$' + num.toLocaleString('en-US');
+    }
+    return num.toLocaleString('ru-RU') + '₽';
+  }
+  
+  // Обновить отображение
+  function updateDisplay() {
+    const isEnglish = document.querySelector('html').lang === 'en' || 
+                     window.location.pathname.includes('en.html');
+    
+    piggyTotal.textContent = formatNumber(totalAmount, isEnglish);
+    
+    // Обновить лейбл
+    const label = document.querySelector('.piggy-label');
+    if (label) {
+      label.textContent = isEnglish ? 'Won on site' : 'Выиграно на сайте';
+    }
+  }
+  
+  // Добавить случайный выигрыш
+  function addRandomWin() {
+    const winAmount = todayWins[Math.floor(Math.random() * todayWins.length)];
+    totalAmount += winAmount;
+    todayAmount += winAmount;
+    
+    // Анимация дождя из денег
+    if (moneyRain) {
+      moneyRain.classList.add('active');
+      setTimeout(() => {
+        moneyRain.classList.remove('active');
+      }, 2000);
+    }
+    
+    // Обновить отображение с анимацией
+    piggyTotal.style.transform = 'scale(1.2)';
+    piggyTotal.style.color = '#22d3ee';
+    
+    setTimeout(() => {
+      updateDisplay();
+      piggyTotal.style.transform = 'scale(1)';
+      piggyTotal.style.color = '';
+    }, 300);
+    
+    // Сохранить в localStorage
+    localStorage.setItem('piggyTotal', totalAmount);
+    localStorage.setItem('lastUpdate', Date.now());
+  }
+  
+  // Проверка на скролл
+  let lastScroll = 0;
+  let scrollWins = 0;
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    const scrollDiff = currentScroll - lastScroll;
+    
+    // Добавляем выигрыш каждые 500px скролла (макс 3 раза)
+    if (scrollDiff > 500 && scrollWins < 3) {
+      addRandomWin();
+      scrollWins++;
+      lastScroll = currentScroll;
+    }
+  });
+  
+  // Клик по кнопке
+  piggyBtn.addEventListener('click', () => {
+    addRandomWin();
+    
+    // Показать сегодняшние выигрыши
+    const isEnglish = document.querySelector('html').lang === 'en' || 
+                     window.location.pathname.includes('en.html');
+    
+    alert(isEnglish 
+      ? `💰 Today won: ${formatNumber(todayAmount, true)}\n🏆 Total on site: ${formatNumber(totalAmount, true)}`
+      : `💰 Сегодня выиграно: ${formatNumber(todayAmount)}\n🏆 Всего на сайте: ${formatNumber(totalAmount)}`
+    );
+  });
+  
+  // Загрузить сохранённые данные
+  const savedTotal = localStorage.getItem('piggyTotal');
+  const lastUpdate = localStorage.getItem('lastUpdate');
+  const now = Date.now();
+  
+  if (savedTotal && lastUpdate) {
+    const daysPassed = Math.floor((now - parseInt(lastUpdate)) / (1000 * 60 * 60 * 24));
+    
+    // Если прошло больше дня, сбросить сегодняшние выигрыши
+    if (daysPassed >= 1) {
+      todayAmount = 0;
+    }
+    
+    totalAmount = parseInt(savedTotal);
+  }
+  
+  // Обновлять каждые 2 минуты
+  setInterval(addRandomWin, 120000);
+  
+  // Инициализация
+  updateDisplay();
+})();
