@@ -1922,3 +1922,314 @@ button {
   50% { opacity: 1; transform: scale(1.05); }
 }
 
+/* ===== НОВОГОДНИЙ TELEGRAM БАННЕР ===== */
+.newyear-tg-banner {
+  position: relative;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 30px;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95),
+    rgba(30, 41, 59, 0.9));
+  border: 2px solid rgba(220, 38, 38, 0.3);
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 60px rgba(220, 38, 38, 0.2),
+    0 0 100px rgba(34, 197, 94, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.snow-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 40% 90%, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px, 100px 100px;
+  animation: snow-fall 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes snow-fall {
+  0% { transform: translateY(-100px); }
+  100% { transform: translateY(100px); }
+}
+
+.newyear-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.newyear-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.newyear-icon {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
+}
+
+.snowflake, .gift-icon, .tg-icon {
+  position: absolute;
+  font-size: 24px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.snowflake {
+  top: 0;
+  left: 10px;
+  animation-name: float-snow;
+  animation-delay: 0s;
+}
+
+.gift-icon {
+  bottom: 5px;
+  right: 0;
+  font-size: 28px;
+  animation-name: bounce-gift;
+  animation-delay: 0.5s;
+}
+
+.tg-icon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #229ED9, #1D4ED8);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.tg-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
+
+@keyframes float-snow {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+@keyframes bounce-gift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.newyear-text {
+  flex: 1;
+}
+
+.newyear-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-xmas {
+  background: linear-gradient(90deg, 
+    #DC2626, /* красный */
+    #EA580C, /* оранжевый */
+    #16A34A, /* зелёный */
+    #0EA5E9, /* голубой */
+    #7C3AED  /* фиолетовый */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-left: 8px;
+}
+
+.newyear-desc {
+  font-size: 16px;
+  color: #BFDBFE;
+  margin: 0 0 15px;
+  opacity: 0.9;
+}
+
+.newyear-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stat-item {
+  font-size: 14px;
+  padding: 6px 14px;
+  background: rgba(220, 38, 38, 0.15);
+  border-radius: 20px;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: #FECACA;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(5px);
+}
+
+.newyear-btn {
+  position: relative;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #DC2626, #EA580C, #16A34A);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  box-shadow: 
+    0 10px 30px rgba(220, 38, 38, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.newyear-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 20px 50px rgba(220, 38, 38, 0.6),
+    0 0 30px rgba(34, 197, 94, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  background: linear-gradient(135deg, #EA580C, #16A34A, #0EA5E9);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 12px;
+  opacity: 0;
+  animation: sparkle-pop 1.5s infinite;
+}
+
+.sparkle:nth-child(1) {
+  top: 10px;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  top: 50%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.sparkle:nth-child(3) {
+  bottom: 15px;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+@keyframes sparkle-pop {
+  0%, 100% { 
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.5) rotate(180deg);
+  }
+}
+
+.lights-string {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    #DC2626 10px,
+    #DC2626 12px,
+    #16A34A 12px,
+    #16A34A 14px,
+    #0EA5E9 14px,
+    #0EA5E9 16px,
+    transparent 16px,
+    transparent 26px
+  );
+  animation: lights-move 3s linear infinite;
+}
+
+@keyframes lights-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 26px 0; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .newyear-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  
+  .newyear-left {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .newyear-stats {
+    justify-content: center;
+  }
+  
+  .newyear-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .newyear-tg-banner {
+    padding: 25px 20px;
+    margin: 30px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newyear-title {
+    font-size: 22px;
+  }
+  
+  .newyear-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .newyear-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
