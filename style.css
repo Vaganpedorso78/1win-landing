@@ -984,3 +984,403 @@ body {
     opacity: 0;
   }
 }
+
+/* ===== 1WIN MODERN 2025 - ДОПОЛНЕНИЕ К СУЩЕСТВУЮЩИМ СТИЛЯМ ===== */
+
+/* ОСНОВНОЙ ФОН */
+body {
+  background: linear-gradient(135deg, #0a0a0f 0%, #15152b 50%, #1a1a3a 100%) !important;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* НЕОНОВЫЙ ФОН-АНИМАЦИЯ */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 243, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(185, 103, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 46, 139, 0.02) 0%, transparent 50%);
+  z-index: -1;
+  animation: bgFloat 20s infinite linear;
+}
+
+@keyframes bgFloat {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(-50px, -50px) rotate(360deg); }
+}
+
+/* ОБНОВЛЕНИЕ СУЩЕСТВУЮЩИХ СТИЛЕЙ */
+
+/* Хедер - стеклянный эффект */
+.header {
+  background: rgba(10, 10, 20, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Логотип - неоновое свечение */
+.logo__mark {
+  background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+  box-shadow: 
+    0 0 20px rgba(0, 243, 255, 0.5),
+    0 0 40px rgba(185, 103, 255, 0.3) !important;
+  animation: logoPulse 2s infinite alternate !important;
+}
+
+@keyframes logoPulse {
+  0% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 243, 255, 0.5); }
+  100% { transform: scale(1.1); box-shadow: 0 0 30px rgba(0, 243, 255, 0.8); }
+}
+
+/* Навигация - неоновые линии */
+.nav__link {
+  position: relative;
+  transition: all 0.3s ease !important;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00f3ff, #b967ff) !important;
+  transition: width 0.3s ease !important;
+}
+
+.nav__link:hover::after {
+  width: 100% !important;
+}
+
+.nav__link:hover {
+  color: #fff !important;
+}
+
+/* Кнопки - неоновые градиенты */
+.btn--primary {
+  background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+  border: none !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease !important;
+}
+
+.btn--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn--primary:hover::before {
+  left: 100%;
+}
+
+.btn--primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 
+    0 10px 30px rgba(0, 243, 255, 0.4),
+    0 0 50px rgba(185, 103, 255, 0.3) !important;
+}
+
+.btn--outline {
+  border: 2px solid rgba(0, 243, 255, 0.3) !important;
+  background: rgba(0, 243, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn--outline:hover {
+  border-color: #00f3ff !important;
+  background: rgba(0, 243, 255, 0.2) !important;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.2) !important;
+}
+
+/* Герой секция */
+.hero__title {
+  background: linear-gradient(135deg, #fff 0%, #00f3ff 50%, #b967ff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.hero__accent {
+  background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Карточки - стеклянный эффект */
+.card, .hero-panel, .feature-card, .review-card, .hot-slot-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card:hover, .hero-panel:hover, .feature-card:hover, .review-card:hover, .hot-slot-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: rgba(0, 243, 255, 0.3) !important;
+  box-shadow: 
+    0 15px 35px rgba(0, 243, 255, 0.15),
+    0 0 40px rgba(185, 103, 255, 0.1) !important;
+}
+
+/* Новогодний баннер - золотой градиент */
+.newyear-tg-banner {
+  background: linear-gradient(135deg, 
+    rgba(10, 10, 20, 0.9),
+    rgba(30, 20, 40, 0.9)) !important;
+  border: 2px solid rgba(255, 215, 0, 0.3) !important;
+  box-shadow: 
+    0 0 60px rgba(255, 215, 0, 0.2),
+    0 0 100px rgba(255, 215, 0, 0.1) !important;
+}
+
+.gradient-xmas {
+  background: linear-gradient(90deg, 
+    #ffd700, #ffaa00, #ff6b00, #ffd700) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: xmasShine 3s infinite linear !important;
+  background-size: 200% 100% !important;
+}
+
+@keyframes xmasShine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Кнопка новогодняя - эффект заморозки */
+.newyear-btn {
+  background: linear-gradient(135deg, #ffd700, #ffaa00, #ff6b00) !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.newyear-btn:hover {
+  animation: freezeEffect 0.8s forwards !important;
+}
+
+@keyframes freezeEffect {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: brightness(1) blur(0);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.1);
+    filter: brightness(1.5) blur(2px);
+    box-shadow: 
+      0 20px 50px rgba(0, 243, 255, 0.6),
+      0 0 60px rgba(0, 243, 255, 0.4) !important;
+    background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+    color: white !important;
+  }
+  100% {
+    transform: translateY(-3px) scale(1.05);
+    filter: brightness(1.2) blur(0);
+    box-shadow: 
+      0 15px 40px rgba(255, 215, 0, 0.4),
+      0 0 50px rgba(255, 215, 0, 0.2) !important;
+  }
+}
+
+/* Хот слоты - VIP стили */
+.hot-slot-vip {
+  border: 2px solid rgba(255, 215, 0, 0.5) !important;
+  background: linear-gradient(135deg, 
+    rgba(255, 215, 0, 0.1),
+    rgba(10, 10, 20, 0.9)) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hot-slot-vip::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, 
+    transparent, #ffd700, transparent, #ffaa00, transparent);
+  z-index: -1;
+  border-radius: 18px;
+  animation: goldBorder 3s infinite linear;
+}
+
+@keyframes goldBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Прогресс бары */
+.hero-progress__fill {
+  background: linear-gradient(90deg, #00ff88, #00f3ff, #b967ff) !important;
+  animation: progressFlow 2s infinite alternate !important;
+}
+
+@keyframes progressFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Футер */
+.footer {
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(20px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Пигги банк - золотой */
+.money-piggy {
+  background: rgba(255, 215, 0, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 2px solid rgba(255, 215, 0, 0.3) !important;
+}
+
+.piggy-total {
+  background: linear-gradient(90deg, #ffd700, #ffaa00, #ffd700) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: goldShine 2s infinite linear !important;
+  background-size: 200% 100% !important;
+}
+
+@keyframes goldShine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Анимация появления */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.reveal--visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Таймлайн точки */
+.timeline__point {
+  background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+  box-shadow: 
+    0 0 20px rgba(0, 243, 255, 0.5),
+    0 0 40px rgba(185, 103, 255, 0.3) !important;
+  animation: pointPulse 2s infinite !important;
+}
+
+@keyframes pointPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* FAQ иконки */
+.faq-item__icon {
+  background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.faq-item__question:hover .faq-item__icon {
+  transform: rotate(90deg) !important;
+}
+
+/* Живая точка */
+.hero-dot--live {
+  background: #00ff88 !important;
+  box-shadow: 
+    0 0 20px #00ff88,
+    0 0 40px rgba(0, 255, 136, 0.5) !important;
+}
+
+/* Заголовки секций */
+.section__title {
+  background: linear-gradient(135deg, #fff, #00f3ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Статистика */
+.hero-kpi__value--accent {
+  background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Снежинки в баннере */
+.snowflake {
+  animation: snowFloat 3s infinite ease-in-out !important;
+}
+
+@keyframes snowFloat {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+/* Подарок в баннере */
+.gift-icon {
+  animation: giftBounce 2s infinite ease-in-out !important;
+}
+
+@keyframes giftBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Адаптивность - улучшения */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 28px !important;
+  }
+  
+  .hero__grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+  
+  .hot-slots-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Дополнительные неоновые эффекты */
+:root {
+  --neon-glow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+/* Добавляем свечение к текстам при наведении */
+.nav__link:hover,
+.btn:hover,
+.slot-play-btn:hover,
+.newyear-btn:hover {
+  text-shadow: var(--neon-glow) !important;
+}
+
+/* Кнопка копирования промокода */
+.hero__promo-copy:hover,
+.band__promo-copy:hover {
+  background: linear-gradient(135deg, #00f3ff, #b967ff) !important;
+  color: #000 !important;
+  transform: scale(1.05) !important;
+}
