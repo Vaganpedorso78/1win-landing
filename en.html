@@ -1,588 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Подключение шрифта Inter -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- Иконки -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta charset="UTF-8">
-  <title>1win 500% Bonus | Exclusive Offer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Exclusive bonus up to 500% on deposit for new 1win players. Modern landing page with promo code and quick start.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1WIN - 500% First Deposit Bonus</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bg-layer"></div>
-
-<header class="header">
-  <div class="container header__inner">
-    <div class="logo">
-      <span class="logo__mark"></span>
-      <span class="logo__text">1win Pulse</span>
-    </div>
-    <nav class="nav">
-      <a href="#steps" class="nav__link">How to start</a>
-      <a href="#details" class="nav__link">About bonus</a>
-      <a href="#reviews" class="nav__link">Reviews</a>
-      <a href="#faq" class="nav__link">FAQ</a>
-    </nav>
+    <div class="bg-layer"></div>
     
-    <div class="lang-simple">
-      <a href="index.html" style="color:#9ca3c7; font-size:13px; text-decoration:none;">RU</a>
-      <span style="color:#666; margin:0 6px;">|</span>
-      <span style="color:#22d3ee; font-size:13px; font-weight:500;">EN</span>
-    </div>
-    
-    <a href="#cta" class="header__btn btn btn--outline">Get bonus</a>
-    <button class="burger" id="burger">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="container hero__grid">
-      <div class="hero__left reveal">
-        <p class="hero__eyebrow">1win Partner Promo Offer</p>
-        <h1 class="hero__title">
-          Up to <span class="hero__accent">500% on first deposit</span>
-          for new 1win players
-        </h1>
-        <p class="hero__subtitle">
-          Modern 1win platform with up to 500% welcome bonus.
-          Quick registration, promo code and fast deposit — all in one place.
-        </p>
-
-        <div class="hero__promo">
-          <p class="hero__promo-label">1win Promo Code</p>
-          <div class="hero__promo-row">
-            <input type="text" id="promo-main" class="hero__promo-code" value="PORNO52" readonly>
-            <button class="btn btn--ghost hero__promo-copy" id="promo-main-copy">Copy</button>
-          </div>
-          <p class="hero__promo-hint">
-            Copy the promo code, enter it during registration and follow the instructions below.
-          </p>
-        </div>
-
-        <div class="hero__actions">
-          <a href="https://1walxy.life/casino/list?open=register&p=vhro" class="btn btn--primary" id="cta-main">
-            Go to 1win
-          </a>
-          <button class="btn btn--ghost scroll-to-steps">How it works</button>
-        </div>
-
-        <div class="hero__meta">
-          <span class="hero__tag">18+ For adults only</span>
-          <span class="hero__timer">Promotion active: <span id="countdown">15:00</span></span>
-        </div>
-      </div>
-
-      <div class="hero__right reveal">
-        <div class="hero-panel hero-panel--main">
-          <div class="hero-panel__header">
-            <p class="hero-panel__label">Live statistics</p>
-            <span class="hero-dot hero-dot--live"></span>
-          </div>
-          <div class="hero-panel__stats">
-            <div class="hero-kpi">
-              <p class="hero-kpi__label">Online now on 1win</p>
-              <p class="hero-kpi__value" id="kpi-online">1 247</p>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <div class="logo-icon">1WIN</div>
+                    <span class="logo-text">Pulse</span>
+                </div>
+                
+                <nav class="nav">
+                    <a href="#steps" class="nav-link">How to Start</a>
+                    <a href="#bonus" class="nav-link">About Bonus</a>
+                    <a href="#slots" class="nav-link">Slots</a>
+                    <a href="#reviews" class="nav-link">Reviews</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </nav>
+                
+                <div class="header-right">
+                    <div class="lang-switch">
+                        <a href="index.html">RU</a>
+                        <span class="lang-divider">|</span>
+                        <a href="en.html" class="lang-active">EN</a>
+                    </div>
+                    <a href="#cta" class="btn btn-header">Get Bonus</a>
+                </div>
+                
+                <button class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="hero-kpi">
-              <p class="hero-kpi__label">Average bonus</p>
-              <p class="hero-kpi__value hero-kpi__value--accent">340%</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-left">
+                        <div class="hero-badge">Exclusive Offer</div>
+                        <h1 class="hero-title">
+                            Get <span class="gradient-text">up to 500% bonus</span><br>
+                            on first deposit at 1WIN
+                        </h1>
+                        <p class="hero-subtitle">
+                            Register with promo code and get maximum bonus<br>
+                            from the start. Fast, simple, no hidden conditions.
+                        </p>
+                        
+                        <div class="promo-block">
+                            <div class="promo-label">Your promo code:</div>
+                            <div class="promo-input-group">
+                                <input type="text" class="promo-input" value="WIN500" readonly>
+                                <button class="btn btn-copy" id="copyPromo">Copy</button>
+                            </div>
+                            <p class="promo-hint">Copy the code and paste during registration on 1WIN</p>
+                        </div>
+                        
+                        <div class="hero-actions">
+                            <a href="https://1win.com" class="btn btn-primary">Get 500% Bonus</a>
+                            <a href="#steps" class="btn btn-secondary">How it works?</a>
+                        </div>
+                        
+                        <div class="hero-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Promotion active:</span>
+                                <span class="meta-value timer">15:00</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">18+</span>
+                                <span class="meta-value">Play responsibly</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-right">
+                        <div class="stats-card">
+                            <div class="stats-header">
+                                <h3>📈 Live Statistics</h3>
+                                <div class="live-indicator">
+                                    <span class="live-dot"></span>
+                                    <span>LIVE</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stats-grid">
+                                <div class="stat">
+                                    <div class="stat-number">1,247</div>
+                                    <div class="stat-label">playing now</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number gradient-text">340%</div>
+                                    <div class="stat-label">average bonus</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-number">500%</div>
+                                    <div class="stat-label">maximum</div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-block">
+                                <div class="progress-header">
+                                    <span>Available bonuses</span>
+                                    <span>78% left</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%"></div>
+                                </div>
+                                <p class="progress-hint">Limited offer, hurry up to get</p>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-start">
+                            <h4>🚀 Quick Start</h4>
+                            <ul>
+                                <li>Registration in 2 minutes</li>
+                                <li>Enter promo code during registration</li>
+                                <li>Deposit from $1</li>
+                                <li>Withdrawal from 15 minutes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-kpi">
-              <p class="hero-kpi__label">Maximum</p>
-              <p class="hero-kpi__value">500%</p>
+        </section>
+
+        <section class="telegram-banner">
+            <div class="container">
+                <div class="tg-banner">
+                    <div class="tg-content">
+                        <div class="tg-icon">🎄</div>
+                        <div class="tg-text">
+                            <h2>New Year Promo Codes in Telegram</h2>
+                            <p>Exclusive bonuses, giveaways and special offers</p>
+                            <div class="tg-stats">
+                                <span>🔥 500+ promo codes</span>
+                                <span>⚡ Instant notifications</span>
+                                <span>🎁 Free bonuses</span>
+                            </div>
+                        </div>
+                        <a href="https://t.me/your_channel" class="btn btn-tg" target="_blank">
+                            Join Channel
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="hero-progress">
-            <div class="hero-progress__top">
-              <span>Special offer</span>
-              <span id="hero-left-label">Left 78%</span>
+        </section>
+
+        <section class="steps-section" id="steps">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🎯 3 Simple Steps to 500% Bonus</h2>
+                    <p>Minimum actions — maximum result</p>
+                </div>
+                
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Click "Get Bonus"</h3>
+                        <p>Go to official 1WIN website via our link</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Enter Promo Code</h3>
+                        <p>Copy WIN500 code and paste during registration</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Make Deposit</h3>
+                        <p>Make first deposit and get up to 500% bonus</p>
+                    </div>
+                </div>
             </div>
-            <div class="hero-progress__bar">
-              <span class="hero-progress__fill" id="hero-progress"></span>
+        </section>
+
+        <section class="bonus-section" id="bonus">
+            <div class="container">
+                <div class="section-header">
+                    <h2>💰 All About 1WIN Bonus</h2>
+                    <p>Transparent conditions and important details</p>
+                </div>
+                
+                <div class="bonus-grid">
+                    <div class="bonus-card">
+                        <div class="bonus-icon">💎</div>
+                        <h3>Up to 500% to deposit</h3>
+                        <p>Maximum bonus on first deposit. Amount depends on deposit size.</p>
+                    </div>
+                    
+                    <div class="bonus-card">
+                        <div class="bonus-icon">⚡</div>
+                        <h3>Instant crediting</h3>
+                        <p>Bonus credited immediately after deposit. No delays or waiting.</p>
+                    </div>
+                    
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🔄</div>
+                        <h3>Transparent conditions</h3>
+                        <p>All wagering requirements are specified on 1WIN website.</p>
+                    </div>
+                    
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🛡️</div>
+                        <h3>Security</h3>
+                        <p>Official 1WIN website. License, SSL encryption, data protection.</p>
+                    </div>
+                </div>
             </div>
-            <p class="hero-progress__hint">
-              Current 1win promotion data updates in real time.
-            </p>
-          </div>
-        </div>
+        </section>
 
-        <div class="hero-panel hero-panel--side">
-          <p class="hero-panel__mini-title">Quick start</p>
-          <ul class="hero-panel__list">
-            <li>Registration: 1-2 minutes</li>
-            <li>Promo code: activates bonus</li>
-            <li>Deposit: popular payment methods</li>
-            <li>Withdrawal: from a few minutes</li>
-          </ul>
+        <section class="slots-section" id="slots">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🎮 Hot Slots Right Now</h2>
+                    <p>These games win most often</p>
+                </div>
+                
+                <div class="slots-grid">
+                    <div class="slot-card">
+                        <div class="slot-badge vip">VIP</div>
+                        <div class="slot-icon">🎰</div>
+                        <h3>Gates of Olympus</h3>
+                        <div class="slot-stats">
+                            <span>🔥 2 jackpots today</span>
+                            <span>💰 x5000 multiplier</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                    
+                    <div class="slot-card">
+                        <div class="slot-badge hit">HIT</div>
+                        <div class="slot-icon">🍬</div>
+                        <h3>Sweet Bonanza</h3>
+                        <div class="slot-stats">
+                            <span>🎯 Frequent bonuses</span>
+                            <span>💰 Up to x21,100</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                    
+                    <div class="slot-card">
+                        <div class="slot-badge new">NEW</div>
+                        <div class="slot-icon">👸</div>
+                        <h3>Starlight Princess</h3>
+                        <div class="slot-stats">
+                            <span>💫 x5,000 multiplier</span>
+                            <span>🎮 High RTP</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                    
+                    <div class="slot-card">
+                        <div class="slot-badge">💎</div>
+                        <div class="slot-icon">💎</div>
+                        <h3>Bonanza Billion</h3>
+                        <div class="slot-stats">
+                            <span>🚀 Mega wins</span>
+                            <span>💰 Bonus games</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                    
+                    <div class="slot-card">
+                        <div class="slot-badge">⚡</div>
+                        <div class="slot-icon">⚡</div>
+                        <h3>Money Train 3</h3>
+                        <div class="slot-stats">
+                            <span>🎯 97% RTP</span>
+                            <span>💰 High volatility</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                    
+                    <div class="slot-card">
+                        <div class="slot-badge">🔥</div>
+                        <div class="slot-icon">🔥</div>
+                        <h3>Fire in the Hole</h3>
+                        <div class="slot-stats">
+                            <span>💥 Explosive multipliers</span>
+                            <span>💰 Up to x25,000</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                    
+                    <div class="slot-card">
+                        <div class="slot-badge">🍭</div>
+                        <div class="slot-icon">🍭</div>
+                        <h3>Sugar Rush</h3>
+                        <div class="slot-stats">
+                            <span>🍬 Sweet bonuses</span>
+                            <span>💰 Up to x5,000</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                    
+                    <div class="slot-card">
+                        <div class="slot-badge">👑</div>
+                        <div class="slot-icon">👑</div>
+                        <h3>Big Bass Bonanza</h3>
+                        <div class="slot-stats">
+                            <span>🎣 Cash fishing</span>
+                            <span>💰 Frequent wins</span>
+                        </div>
+                        <button class="btn btn-slot">Play</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📢 Player Reviews</h2>
+                    <p>Real opinions about 1WIN bonus</p>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <p class="review-text">"Got 500% bonus, everything is fair. Main thing — read wagering requirements."</p>
+                        <div class="review-author">
+                            <span class="author-name">@alex_winner</span>
+                            <span class="author-tag">bets + live</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <p class="review-text">"Interface is convenient, withdrawal is fast. Bonus helped test strategies."</p>
+                        <div class="review-author">
+                            <span class="author-name">@casino_pro</span>
+                            <span class="author-tag">2 years experience</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card">
+                        <p class="review-text">"Don't perceive as free money. But for start — excellent option."</p>
+                        <div class="review-author">
+                            <span class="author-name">@smart_gambler</span>
+                            <span class="author-tag">responsible gaming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>❓ FAQ</h2>
+                    <p>Everything you need to know about bonus</p>
+                </div>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is this official 1WIN website?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, this is partner promo website. We provide information and links to official 1WIN website.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Does everyone get 500% bonus?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Bonus amount depends on deposit amount and current conditions on 1WIN. Maximum bonus — up to 500%.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What documents needed for withdrawal?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Usually passport or driver's license. Specific requirements see in "Verification" section on 1WIN.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How long does withdrawal take?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>From 15 minutes to 24 hours, depends on chosen method and amount.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="cta">
+            <div class="container">
+                <div class="cta-block">
+                    <h2>Don't miss your chance!</h2>
+                    <p>Bonus up to 500% available only for new players. Act now!</p>
+                    
+                    <div class="cta-promo">
+                        <input type="text" class="cta-input" value="WIN500" readonly>
+                        <button class="btn btn-primary btn-large">Get Bonus →</button>
+                    </div>
+                    
+                    <p class="cta-note">By clicking button you go to official 1WIN website</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">1WIN Pulse</div>
+                    <p class="footer-text">
+                        This is not official 1WIN website. We provide information 
+                        about promo offers and bonuses. All gambling takes place on official 1WIN website.
+                    </p>
+                </div>
+                
+                <div class="footer-warning">
+                    <p>⚠️ 18+ | Gambling can be addictive. Play responsibly.</p>
+                    <p>Don't play with last money. Set time and money limits.</p>
+                </div>
+                
+                <a href="#" class="footer-top">↑ Back to top</a>
+            </div>
         </div>
-      </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#cta" class="btn btn-primary">Get 500% Bonus</a>
     </div>
 
-    <!-- Scroll indicator -->
-    <button class="hero-scroll scroll-to-steps">
-      <span>Scroll down</span>
-      <div class="hero-scroll__circle"></div>
-    </button>
-  </section>
-
-  <!-- NEW YEAR TELEGRAM BANNER -->
-  <div class="newyear-tg-banner" id="telegram-banner">
-    <div class="snow-overlay"></div>
-    <div class="newyear-content">
-      <div class="newyear-left">
-        <div class="newyear-icon">
-          <div class="snowflake">❄️</div>
-          <div class="gift-icon">🎁</div>
-          <div class="tg-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.655-.48.882-1.025.55l-2.81-2.07-1.455 1.37c-.16.16-.295.295-.605.295l.213-3.05 5.16-4.66c.211-.19-.046-.295-.33-.107l-6.387 4.02-2.76-.86c-.6-.188-.614-.6.126-.882l10.826-4.17c.5-.16.94.12.78.882z"/>
-            </svg>
-          </div>
-        </div>
-        <div class="newyear-text">
-          <h3 class="newyear-title">🎅 NEW YEAR <span class="gradient-xmas">TELEGRAM</span></h3>
-          <p class="newyear-desc">Exclusive promo codes, giveaways & gifts!</p>
-          <div class="newyear-stats">
-            <span class="stat-item">🎁 500+ promo codes</span>
-            <span class="stat-item">💰 Free spins</span>
-            <span class="stat-item">🎄 Holiday bonuses</span>
-          </div>
-        </div>
-      </div>
-      <a href="https://t.me/+dgZAtYl4UsY4MmJi" class="newyear-btn freeze-btn" target="_blank" data-freeze="true">
-        <span class="btn-text">Get Gifts</span>
-        <div class="btn-sparkles">
-          <span class="sparkle">✨</span>
-          <span class="sparkle">✨</span>
-          <span class="sparkle">✨</span>
-        </div>
-        <div class="ice-overlay"></div>
-      </a>
-    </div>
-    <div class="lights-string"></div>
-  </div>
-
-  <!-- STEPS (timeline) -->
-  <section class="section section--soft" id="steps">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">3 steps to get 1win bonus</h2>
-        <p class="section__subtitle">
-          Minimum text — maximum specifics. Follow the timeline.
-        </p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline__item reveal">
-          <div class="timeline__point"></div>
-          <div class="timeline__content">
-            <p class="timeline__step">Step 1</p>
-            <h3 class="timeline__title">Go to 1win via the button</h3>
-            <p class="timeline__text">
-              Click "Go to 1win" to open the official registration page with the current promotion for your region.
-            </p>
-          </div>
-        </div>
-        <div class="timeline__item reveal">
-          <div class="timeline__point"></div>
-          <div class="timeline__content">
-            <p class="timeline__step">Step 2</p>
-            <h3 class="timeline__title">Enter promo code during registration</h3>
-            <p class="timeline__text">
-              Copy the promo code from this site and paste it into the promo code/offer field on 1win — this links the bonus to you.
-            </p>
-          </div>
-        </div>
-        <div class="timeline__item reveal">
-          <div class="timeline__point"></div>
-          <div class="timeline__content">
-            <p class="timeline__step">Step 3</p>
-            <h3 class="timeline__title">Make your first deposit</h3>
-            <p class="timeline__text">
-              Top up your account using a convenient method. Under the current promotion, 1win awards up to 500% as a bonus to your amount.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROMO BAND -->
-  <section class="section section--band" id="cta">
-    <div class="container band reveal">
-      <div class="band__left">
-        <p class="band__label">1win Promo Code</p>
-        <h2 class="band__title">Secure up to 500% bonus for yourself</h2>
-        <p class="band__text">
-          Copy the promo code, then click the button — the promo will remain in the buffer and you can immediately paste it on the 1win registration page.
-        </p>
-        <div class="band__promo">
-          <input type="text" id="promo-band" class="band__promo-code" value="PORNO52" readonly>
-          <button class="btn btn--outline band__promo-copy" id="promo-band-copy">Copy</button>
-        </div>
-      </div>
-      <div class="band__right">
-        <a href="https://1walxy.life/casino/list?open=register&p=vhro" class="btn btn--primary btn--big band__btn">
-          Go to 1win
-        </a>
-        <p class="band__note">
-          By clicking the button, you go to the official 1win website via a partner link.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DETAILS / FEATURES -->
-  <section class="section" id="details">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">What you should know about 1win bonus</h2>
-      </div>
-      <div class="grid-features">
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Bonus</p>
-          <h3 class="feature-card__title">Up to 500% to deposit</h3>
-          <p class="feature-card__text">
-            The bonus amount depends on the deposit amount and promotion terms. You see actual numbers on the 1win side during registration.
-          </p>
-        </article>
-
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Transparency</p>
-          <h3 class="feature-card__title">Terms on 1win side</h3>
-          <p class="feature-card__text">
-            All nuances regarding wagering, odds, limits and restrictions are specified directly on the official 1win website. We do not change them.
-          </p>
-        </article>
-
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Speed</p>
-          <h3 class="feature-card__title">Registration and withdrawal</h3>
-          <p class="feature-card__text">
-            Registration usually takes 1-2 minutes, and withdrawal under conditions — from a few minutes to an hour, depending on the method.
-          </p>
-        </article>
-
-        <article class="card feature-card reveal">
-          <p class="feature-card__tag">Responsibility</p>
-          <h3 class="feature-card__title">Gambling = risk</h3>
-          <p class="feature-card__text">
-            Do not treat 1win as a source of income. This is gambling. Use only money you can afford to lose and set personal limits.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="section section--soft" id="reviews">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">Player opinions from the web</h2>
-        <p class="section__subtitle">
-          Collected typical reviews about 1win and welcome bonus via promo.
-        </p>
-      </div>
-
-      <div class="reviews-slider">
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            "Got in via promo code, bonus arrived immediately after deposit. The main thing is not to ignore the conditions, then no surprises."
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@win***</span>
-            <span class="review-card__tag">bets + live</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            "500% sounds loud, but overall the bonus is OK if you don't consider it 'free money' and use it wisely."
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@pro***</span>
-            <span class="review-card__tag">experience 1 year</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            "1win interface is pleasant, deposits and withdrawals don't lag. The bonus helps test the platform with less risk."
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@play***</span>
-            <span class="review-card__tag">casino + slots</span>
-          </div>
-        </article>
-
-        <article class="review-card reveal">
-          <p class="review-card__text">
-            "Don't perceive the bonus as a way to 'start from scratch'. Play as entertainment and everything will be fine."
-          </p>
-          <div class="review-card__meta">
-            <span class="review-card__user">@cas***</span>
-            <span class="review-card__tag">responsible gaming</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">FAQ about 1win and bonus</h2>
-      </div>
-      <div class="faq reveal">
-        <div class="faq-item">
-          <button class="faq-item__question">
-            Is this the official 1win website?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              No. This is a partner promo landing. We do not accept payments or conduct games.
-              All deposits, bets and bonuses take place on the official 1win website.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-item__question">
-            Is the 500% bonus given to everyone?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              The bonus amount depends on the current 1win promotion, deposit amount, region and promo code.
-              Current conditions are always indicated on the 1win website at the time of registration.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-item__question">
-            Is verification needed?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              Verification is usually required when withdrawing large amounts or upon 1win request.
-              See specific requirements in the "Help" / "Rules" section on the 1win website.
-            </p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-item__question">
-            What are the risks?
-            <span class="faq-item__icon">+</span>
-          </button>
-          <div class="faq-item__answer">
-            <p>
-              Gambling always carries the risk of losing money. Do not use last money for deposit,
-              do not borrow, set personal limits and treat 1win as entertainment, not as earnings.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hot Slots Live -->
-  <section class="hot-slots-section">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">🎮 Hot Slots Right Now</h2>
-        <p class="section__subtitle">These games are paying out right now. Choose and play!</p>
-      </div>
-      
-      <div class="hot-slots-grid">
-        <!-- King's Thimbles (VIP) -->
-        <div class="hot-slot-card hot-slot-vip">
-          <div class="slot-badge">👑 VIP</div>
-          <div class="slot-icon">🎰</div>
-          <h3 class="slot-title">King's Thimbles</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🔥 3 wins in 5 min</span>
-            <span class="slot-stat">💰 Up to x100</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 12 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="kings-thimbles">Play Now</button>
-        </div>
-        
-        <!-- Chicken Road (Hit) -->
-        <div class="hot-slot-card hot-slot-hit">
-          <div class="slot-badge">🐔 HIT</div>
-          <div class="slot-icon">🥚</div>
-          <h3 class="slot-title">Chicken Road</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">⚡ x47 just now</span>
-            <span class="slot-stat">🏆 High RTP</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 8 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="chicken-road">Play Now</button>
-        </div>
-        
-        <!-- Mines (Risk) -->
-        <div class="hot-slot-card hot-slot-risk">
-          <div class="slot-badge">💣 RISK</div>
-          <div class="slot-icon">⚡</div>
-          <h3 class="slot-title">Mines</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">💎 +25k recently</span>
-            <span class="slot-stat">🎯 87% win rate</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 15 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="mines">Play Now</button>
-        </div>
-        
-        <!-- Gates of Olympus -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">⚡</div>
-          <div class="slot-icon">⚡</div>
-          <h3 class="slot-title">Gates of Olympus</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">✨ 2 jackpots today</span>
-            <span class="slot-stat">🎰 Classic</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 21 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="gates">Play Now</button>
-        </div>
-        
-        <!-- Sweet Bonanza -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">🍬</div>
-          <div class="slot-icon">🍬</div>
-          <h3 class="slot-title">Sweet Bonanza</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🎯 Frequent bonuses</span>
-            <span class="slot-stat">💰 Up to x21,100</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 18 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="sweet">Play Now</button>
-        </div>
-        
-        <!-- Sugar Rush -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">🍭</div>
-          <div class="slot-icon">🍭</div>
-          <h3 class="slot-title">Sugar Rush</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🔥 New</span>
-            <span class="slot-stat">⭐ High RTP</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 14 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="sugar">Play Now</button>
-        </div>
-        
-        <!-- Starlight Princess -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">🌟</div>
-          <div class="slot-icon">👸</div>
-          <h3 class="slot-title">Starlight Princess</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">💫 x5,000 multiplier</span>
-            <span class="slot-stat">🎮 Engaging</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 9 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="starlight">Play Now</button>
-        </div>
-        
-        <!-- Bonanza Billion -->
-        <div class="hot-slot-card">
-          <div class="slot-badge">💎</div>
-          <div class="slot-icon">💎</div>
-          <h3 class="slot-title">Bonanza Billion</h3>
-          <div class="slot-stats">
-            <span class="slot-stat">🚀 Mega wins</span>
-            <span class="slot-stat">💰 Bonus games</span>
-          </div>
-          <div class="slot-players">
-            <span class="players-count">🎯 11 people playing</span>
-          </div>
-          <button class="slot-play-btn" data-game="bonanza">Play Now</button>
-        </div>
-      </div>
-      
-      <div class="hot-slots-note">
-        <p>🎯 <strong>Tip:</strong> King's Thimbles gives the most frequent wins right now</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- MOBILE STICKY CTA -->
-<div class="sticky-cta">
-  <a href="https://1walxy.life/casino/list?open=register&p=vhro" class="sticky-cta__btn">
-    Get 1win bonus
-  </a>
-</div>
-
-<footer class="footer">
-  <div class="container footer__inner">
-    <div>
-      <p class="footer__logo">1win Pulse</p>
-      <p class="footer__text">
-        This site is not 1win, casino or bookmaker. We do not accept bets or organize gambling.
-        Promo information and links to the official 1win website are placed here.
-      </p>
-    </div>
-    <div class="footer__meta">
-      <p class="footer__warning">18+ Gambling can be addictive. Play responsibly.</p>
-      <a href="#top" class="footer__link">Back to top</a>
-    </div>
-  </div>
-</footer>
-
-<!-- Money Piggy Bank -->
-<div class="money-piggy">
-  <div class="piggy-container">
-    <div class="piggy-icon">💰</div>
-    <div class="piggy-stats">
-      <div class="piggy-total" id="piggy-total">$50,124</div>
-      <div class="piggy-label">Won on site</div>
-    </div>
-    <div class="piggy-coins">
-      <span class="coin">🪙</span>
-      <span class="coin">🪙</span>
-      <span class="coin">🪙</span>
-    </div>
-  </div>
-  <button class="piggy-btn" id="piggy-btn">💎</button>
-</div>
-
-<!-- Money Rain Effect -->
-<div class="money-rain"></div>
-
-<!-- Site Aura -->
-<div class="site-aura"></div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
