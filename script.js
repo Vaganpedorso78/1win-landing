@@ -291,3 +291,103 @@ bindPromoCopy('promo-band', 'promo-band-copy');
   // Инициализация
   updateDisplay();
 })();
+
+// Site Aura
+(function initSiteAura() {
+  const aura = document.querySelector('.site-aura');
+  if (!aura) return;
+  
+  let currentAura = 'blue'; // Начинаем с синей ауры
+  
+  // Установить ауру
+  function setAura(type) {
+    aura.className = 'site-aura';
+    
+    setTimeout(() => {
+      aura.classList.add(type);
+      currentAura = type;
+    }, 100);
+  }
+  
+  // Цикл аур
+  function auraCycle() {
+    const rand = Math.random();
+    
+    if (rand < 0.1) { // 10% шанс на фиолетовую (джекпот)
+      setAura('purple');
+      
+      // Показать уведомление о джекпоте
+      setTimeout(() => {
+        const isEnglish = document.querySelector('html').lang === 'en' || 
+                         window.location.pathname.includes('en.html');
+        
+        if (Math.random() < 0.5) { // 50% шанс показать уведомление
+          console.log(isEnglish 
+            ? '🎰 JACKPOT ALERT: Someone just won big on the site!' 
+            : '🎰 ДЖЕКПОТ: Кто-то только что выиграл крупную сумму на сайте!'
+          );
+        }
+      }, 1000);
+      
+      // Вернуться к синей через 10 секунд
+      setTimeout(() => setAura('blue'), 10000);
+      
+    } else if (rand < 0.4) { // 30% шанс на зелёную (много выигрышей)
+      setAura('green');
+      
+      // Вернуться к синей через 2-3 минуты
+      setTimeout(() => setAura('blue'), 120000 + Math.random() * 60000);
+      
+    } else { // 60% шанс остаться на синей
+      setAura('blue');
+    }
+  }
+  
+  // Триггеры для зелёной ауры (при событиях)
+  function triggerGreenAura() {
+    if (currentAura !== 'purple') { // Не перебивать фиолетовую
+      setAura('green');
+      setTimeout(() => setAura('blue'), 120000); // 2 минуты
+    }
+  }
+  
+  // Случайные события которые запускают зелёную ауру
+  function randomEvents() {
+    // Случайное время между 2-5 минутами
+    const time = 120000 + Math.random() * 180000;
+    
+    setTimeout(() => {
+      if (currentAura === 'blue') { // Только если сейчас синяя
+        triggerGreenAura();
+      }
+      randomEvents(); // Рекурсивно запускаем следующий ивент
+    }, time);
+  }
+  
+  // Инициализация
+  setAura('blue'); // Начальная аура
+  randomEvents(); // Запускаем случайные ивенты
+  
+  // Менять ауру каждые 5-10 минут
+  setInterval(auraCycle, 300000 + Math.random() * 300000);
+  
+  // Триггеры при взаимодействии с сайтом
+  document.addEventListener('click', () => {
+    if (Math.random() < 0.1) { // 10% шанс при клике
+      if (currentAura === 'blue') {
+        triggerGreenAura();
+      }
+    }
+  });
+  
+  // При скролле вниз
+  let lastScrollY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY + 500) { // Прокрутили 500px
+      if (currentAura === 'blue' && Math.random() < 0.3) {
+        triggerGreenAura();
+      }
+    }
+    lastScrollY = window.scrollY;
+  });
+})();
