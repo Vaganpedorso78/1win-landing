@@ -1165,3 +1165,185 @@ body {
         align-items: center;
     }
 }
+
+/* ===== SOCIAL PROOF SECTION ===== */
+.social-proof-section {
+    padding: 80px 0;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05), transparent 60%);
+}
+
+.proof-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.proof-stat {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.proof-stat:hover {
+    transform: translateY(-10px);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+.proof-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.proof-content {
+    margin-bottom: 15px;
+}
+
+.proof-number {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.proof-label {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.proof-badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Live Payments */
+.live-payments {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.payments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.payments-header h3 {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payments-feed {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.payment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    animation: slideIn 0.5s ease;
+    border-left: 3px solid #10b981;
+}
+
+.payment-item.warning {
+    border-left-color: #f59e0b;
+}
+
+.payment-item.danger {
+    border-left-color: #ef4444;
+}
+
+.payment-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.payment-info {
+    flex: 1;
+}
+
+.payment-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.payment-game {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.payment-amount {
+    font-weight: 700;
+    font-size: 18px;
+    color: #10b981;
+}
+
+.payment-time {
+    color: #94a3b8;
+    font-size: 12px;
+    text-align: right;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scrollbar для ленты выплат */
+.payments-feed::-webkit-scrollbar {
+    width: 6px;
+}
+
+.payments-feed::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.payments-feed::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 3px;
+}
