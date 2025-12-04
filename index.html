@@ -6,6 +6,76 @@
     <title>1WIN - Бонус 500% на первый депозит</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    <!-- Chat Widget -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-toggle" id="chatToggle">
+        <div class="chat-icon">💬</div>
+        <span class="chat-label">Помощь</span>
+        <div class="chat-notification">1</div>
+    </div>
+    
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-title">
+                <div class="chat-avatar">🤖</div>
+                <div>
+                    <h4>Помощник 1WIN</h4>
+                    <p class="chat-status">Онлайн • Отвечает быстро</p>
+                </div>
+            </div>
+            <button class="chat-close" id="chatClose">×</button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">
+                    Привет! 👋 Я виртуальный помощник 1WIN. 
+                    Чем могу помочь с бонусом, регистрацией или играми?
+                </div>
+                <div class="message-time">только что</div>
+            </div>
+            
+            <div class="message bot">
+                <div class="message-content">
+                    Выберите вопрос или задайте свой:
+                </div>
+                <div class="message-options">
+                    <button class="option-btn" data-question="Как получить бонус 500%?">
+                        🎁 Как получить бонус 500%?
+                    </button>
+                    <button class="option-btn" data-question="Нужна ли верификация?">
+                        📋 Нужна ли верификация?
+                    </button>
+                    <button class="option-btn" data-question="Сколько времени вывод денег?">
+                        ⏱️ Сколько времени вывод денег?
+                    </button>
+                    <button class="option-btn" data-question="Есть ли мобильное приложение?">
+                        📱 Есть ли мобильное приложение?
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" 
+                   class="chat-input" 
+                   id="chatInput" 
+                   placeholder="Напишите ваш вопрос..."
+                   maxlength="200">
+            <button class="chat-send" id="chatSend">
+                <span>Отправить</span>
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="chat-footer">
+            <span class="chat-hint">💡 Ответ в течение 2 минут</span>
+            <span class="chat-hint">🛡️ Конфиденциально и безопасно</span>
+        </div>
+    </div>
+</div>
 <body>
     <!-- Фоновый слой -->
     <div class="bg-layer"></div>
@@ -541,4 +611,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
