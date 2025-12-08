@@ -1,435 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1WIN - 500% First Deposit Bonus | Premium Casino Experience</title>
-    <meta name="description" content="Get up to 500% bonus on your first deposit at 1WIN. Exclusive promo code: WIN500. Fast registration, instant withdrawals.">
+    <title>1WIN PULSE • Эксклюзивный бонус 500%</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Новогодние огни -->
-    <div class="christmas-lights"></div>
+    <!-- Фоновые элементы -->
+    <div class="bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-line"></div>
+        <div class="bg-grid"></div>
+    </div>
     
-    <!-- Фоновый слой -->
-    <div class="bg-layer"></div>
-    
-    <!-- Прогресс бар скролла -->
-    <div class="scroll-progress"></div>
-    
-    <!-- Шапка сайта -->
+    <!-- Шапка нового дизайна -->
     <header class="header">
         <div class="container">
-            <div class="header-inner">
-                <a href="#" class="logo">
-                    <div class="logo-icon">1WIN</div>
-                    <span class="logo-text">Pulse</span>
-                </a>
-                
-                <nav class="nav">
-                    <a href="#steps" class="nav-link">How to Start</a>
-                    <a href="#bonus" class="nav-link">About Bonus</a>
-                    <a href="#reviews" class="nav-link">Reviews</a>
-                    <a href="#faq" class="nav-link">FAQ</a>
-                </nav>
-                
-                <div class="header-right">
-                    <div class="lang-switch">
-                        <a href="ru.html">RU</a>
-                        <span class="lang-divider">|</span>
-                        <a href="index.html" class="lang-active">EN</a>
-                    </div>
-                    <a href="#cta" class="btn btn-header">Get Bonus</a>
+            <nav class="nav">
+                <div class="logo">
+                    <span class="logo-icon">1WIN</span>
+                    <span class="logo-text">PULSE</span>
                 </div>
                 
-                <button class="burger-menu">
-                    <span></span>
+                <div class="nav-menu">
+                    <a href="#steps" class="nav-link">
+                        <span class="nav-number">01</span>
+                        <span class="nav-text">Старт</span>
+                    </a>
+                    <a href="#bonus" class="nav-link">
+                        <span class="nav-number">02</span>
+                        <span class="nav-text">Бонус</span>
+                    </a>
+                    <a href="#slots" class="nav-link">
+                        <span class="nav-number">03</span>
+                        <span class="nav-text">Слоты</span>
+                    </a>
+                    <a href="#reviews" class="nav-link">
+                        <span class="nav-number">04</span>
+                        <span class="nav-text">Отзывы</span>
+                    </a>
+                    <div class="nav-divider"></div>
+                    <div class="lang-switch">
+                        <a href="index.html" class="lang-active">RU</a>
+                        <a href="en.html">EN</a>
+                    </div>
+                </div>
+                
+                <button class="menu-toggle">
                     <span></span>
                     <span></span>
                 </button>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Основное содержимое -->
-    <main>
-        <!-- Герой-секция -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-left">
-                        <div class="hero-badge">🔥 Exclusive New Year Offer</div>
-                        <h1 class="hero-title">
-                            Get <span class="gradient-text">500% Bonus</span><br>
-                            on Your First Deposit
-                        </h1>
-                        <p class="hero-subtitle">
-                            Start your winning journey with maximum bonus power. 
-                            Register with our promo code and unlock premium gaming experience.
-                        </p>
-                        
-                        <!-- Промокод блок -->
-                        <div class="promo-block">
-                            <div class="promo-label">Your Exclusive Promo Code:</div>
-                            <div class="promo-input-group">
-                                <input type="text" class="promo-input" value="WIN500" readonly>
-                                <button class="btn btn-copy" id="copyPromo">Copy Code</button>
-                            </div>
-                            <p class="promo-hint">Use this code during registration on 1WIN</p>
-                        </div>
-                        
-                        <!-- Кнопки действий -->
-                        <div class="hero-actions">
-                            <a href="https://1win.com" class="btn btn-primary">🎁 Get 500% Bonus</a>
-                            <a href="#steps" class="btn btn-secondary">✨ How It Works</a>
-                        </div>
-                        
-                        <!-- Таймер -->
-                        <div class="hero-meta">
-                            <div class="meta-item">
-                                <span class="meta-label">Offer ends in:</span>
-                                <span class="meta-value timer">24:59</span>
-                            </div>
-                            <div class="meta-item">
-                                <span class="meta-label">🎄</span>
-                                <span class="meta-value">New Year Special</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Правая часть -->
-                    <div class="hero-right">
-                        <!-- Статистика -->
-                        <div class="stats-wheel">
-                            <div class="stats-header">
-                                <h3>📊 Live Statistics</h3>
-                                <div class="live-indicator">
-                                    <span class="live-dot"></span>
-                                    <span>LIVE UPDATES</span>
-                                </div>
-                            </div>
-                            
-                            <div class="stats-grid">
-                                <div class="stat">
-                                    <div class="stat-number">2,841</div>
-                                    <div class="stat-label">Players Online</div>
-                                </div>
-                                <div class="stat">
-                                    <div class="stat-number gradient-text">420%</div>
-                                    <div class="stat-label">Avg. Bonus</div>
-                                </div>
-                                <div class="stat">
-                                    <div class="stat-number">$1.2M</div>
-                                    <div class="stat-label">Won Today</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Быстрый старт -->
-                        <div class="quick-start">
-                            <h4>⚡ Lightning Start</h4>
-                            <ul>
-                                <li>2-Minute Registration</li>
-                                <li>Enter WIN500 Promo Code</li>
-                                <li>Deposit from $10</li>
-                                <li>Withdraw in 15 Minutes</li>
-                                <li>24/7 Support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Telegram баннер -->
-        <section class="telegram-banner">
-            <div class="container">
-                <div class="tg-banner">
-                    <div class="tg-content">
-                        <div class="tg-icon">🎯</div>
-                        <div class="tg-text">
-                            <h2>Exclusive Telegram Channel</h2>
-                            <p>Get secret promo codes, insider tips, and exclusive bonuses before anyone else</p>
-                            <div class="tg-stats">
-                                <span>🔥 500+ Active Members</span>
-                                <span>⚡ Instant Notifications</span>
-                                <span>🎁 Daily Free Spins</span>
-                            </div>
-                        </div>
-                        <a href="https://t.me/your_channel" class="btn btn-tg" target="_blank">
-                            Join Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Шаги получения бонуса -->
-        <section class="steps-section" id="steps">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🎲 3 Steps to Your Bonus</h2>
-                    <p>Simple, fast, and effective way to start winning</p>
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="neo-badge">
+                    <span class="badge-text">NEW YEAR 2025</span>
+                    <div class="badge-glow"></div>
                 </div>
                 
-                <div class="steps-grid">
-                    <div class="step-card reveal">
-                        <div class="step-number">1</div>
-                        <h3>Click & Register</h3>
-                        <p>Click "Get Bonus" and complete quick registration on official 1WIN website</p>
+                <h1 class="hero-title">
+                    <span class="title-line">Бонус <span class="text-accent">500%</span></span>
+                    <span class="title-line">на первый депозит</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Эксклюзивное предложение для новых игроков 1WIN. 
+                    Максимальный бонус при минимальных условиях.
+                </p>
+                
+                <div class="promo-card">
+                    <div class="promo-label">
+                        <span class="label-text">Твой промокод</span>
+                        <span class="label-hint">скопируй и вставь при регистрации</span>
                     </div>
-                    
-                    <div class="step-card reveal">
-                        <div class="step-number">2</div>
-                        <h3>Use Promo Code</h3>
-                        <p>Enter WIN500 in promo code field during registration process</p>
+                    <div class="promo-code">
+                        <code class="code-text">WIN500</code>
+                        <button class="copy-btn" data-copy="WIN500">
+                            <span class="copy-text">Копировать</span>
+                            <span class="copy-icon">⎘</span>
+                        </button>
                     </div>
-                    
-                    <div class="step-card reveal">
-                        <div class="step-number">3</div>
-                        <h3>Deposit & Win</h3>
-                        <p>Make your first deposit and get 500% bonus credited instantly</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Информация о бонусе -->
-        <section class="bonus-section" id="bonus">
-            <div class="container">
-                <div class="section-header">
-                    <h2>💎 Premium Bonus Features</h2>
-                    <p>Everything you need to know about our exclusive offer</p>
                 </div>
                 
-                <div class="bonus-grid">
-                    <div class="bonus-card reveal">
-                        <div class="bonus-icon">💰</div>
-                        <h3>500% First Deposit</h3>
-                        <p>Maximum bonus on your initial deposit. The more you deposit, the bigger your bonus.</p>
-                    </div>
-                    
-                    <div class="bonus-card reveal">
-                        <div class="bonus-icon">⚡</div>
-                        <h3>Instant Crediting</h3>
-                        <p>Bonus appears in your account immediately after deposit confirmation.</p>
-                    </div>
-                    
-                    <div class="bonus-card reveal">
-                        <div class="bonus-icon">🛡️</div>
-                        <h3>Transparent Terms</h3>
-                        <p>Clear wagering requirements. No hidden conditions or surprises.</p>
-                    </div>
-                    
-                    <div class="bonus-card reveal">
-                        <div class="bonus-icon">🌐</div>
-                        <h3>Multi-Platform</h3>
-                        <p>Access your bonus on website, mobile app, or desktop version.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Отзывы -->
-        <section class="reviews-section" id="reviews">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🌟 Player Testimonials</h2>
-                    <p>Real experiences from our community</p>
+                <div class="hero-actions">
+                    <a href="https://1win.com" class="btn btn-primary">
+                        <span class="btn-text">Получить бонус</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#steps" class="btn btn-outline">
+                        <span class="btn-text">Как это работает?</span>
+                    </a>
                 </div>
                 
-                <div class="reviews-grid">
-                    <div class="review-card reveal">
-                        <p class="review-text">"The 500% bonus gave me enough playtime to develop a winning strategy. Withdrew $2,500 in my first week!"</p>
-                        <div class="review-author">
-                            <span class="author-name">@WinningPro</span>
-                            <span class="author-tag">High Roller</span>
-                        </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" data-count="1247">0</div>
+                        <div class="stat-label">играют сейчас</div>
                     </div>
-                    
-                    <div class="review-card reveal">
-                        <p class="review-text">"Fast registration, instant bonus, withdrawals processed in 15 minutes. Best casino experience I've had."</p>
-                        <div class="review-author">
-                            <span class="author-name">@Lucky_Charm</span>
-                            <span class="author-tag">Regular Player</span>
-                        </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-count="340">0<sup>%</sup></div>
+                        <div class="stat-label">средний бонус</div>
                     </div>
-                    
-                    <div class="review-card reveal">
-                        <p class="review-text">"Customer support is amazing! Helped me understand bonus terms and even gave extra free spins. 5 stars!"</p>
-                        <div class="review-author">
-                            <span class="author-name">@Casino_Queen</span>
-                            <span class="author-tag">VIP Member</span>
-                        </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-count="78">0<sup>%</sup></div>
+                        <div class="stat-label">осталось бонусов</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- FAQ -->
-        <section class="faq-section" id="faq">
-            <div class="container">
-                <div class="section-header">
-                    <h2>❓ Frequently Asked Questions</h2>
-                    <p>Quick answers to common questions</p>
+    <!-- Telegram баннер -->
+    <section class="tg-section">
+        <div class="container">
+            <div class="tg-card">
+                <div class="tg-emoji">🎄</div>
+                <div class="tg-content">
+                    <h3 class="tg-title">Новогодние промокоды в Telegram</h3>
+                    <p class="tg-text">Эксклюзивные бонусы, розыгрыши и специальные предложения</p>
+                    <div class="tg-features">
+                        <span class="tg-feature">🔥 500+ промокодов</span>
+                        <span class="tg-feature">⚡ Мгновенные уведомления</span>
+                        <span class="tg-feature">🎁 Бесплатные бонусы</span>
+                    </div>
+                </div>
+                <a href="https://t.me/your_channel" class="btn btn-tg" target="_blank">
+                    Подписаться
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Шаги -->
+    <section class="steps-section" id="steps">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Как получить бонус</h2>
+                <p class="section-subtitle">Три простых шага к максимальному бонусу</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">🚀</div>
+                    <h3 class="step-title">Нажми "Получить бонус"</h3>
+                    <p class="step-text">Перейди на официальный сайт 1WIN по нашей ссылке</p>
                 </div>
                 
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>Is this the official 1WIN website?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>This is a partner promotional website. We provide verified information and direct links to the official 1WIN platform.</p>
-                        </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">🎯</div>
+                    <h3 class="step-title">Введи промокод</h3>
+                    <p class="step-text">Скопируй промокод WIN500 и вставь при регистрации</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">💰</div>
+                    <h3 class="step-title">Пополни счет</h3>
+                    <p class="step-text">Сделай первый депозит и получи бонус до 500%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бонус информация -->
+    <section class="features-section" id="bonus">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Преимущества бонуса</h2>
+                <p class="section-subtitle">Почему стоит получить именно сейчас</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3 class="feature-title">До 500% к депозиту</h3>
+                    <p class="feature-text">Максимальный бонус на первый депозит. Сумма зависит от размера пополнения.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Мгновенное зачисление</h3>
+                    <p class="feature-text">Бонус зачисляется сразу после пополнения счета. Без задержек и ожиданий.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Прозрачные условия</h3>
+                    <p class="feature-text">Все условия отыгрыша указаны на сайте 1WIN. Никаких скрытых требований.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Безопасность</h3>
+                    <p class="feature-text">Официальный сайт 1WIN. Лицензия, SSL-шифрование, защита данных.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Слоты -->
+    <section class="slots-section" id="slots">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Популярные слоты</h2>
+                <p class="section-subtitle">На этих играх выигрывают чаще всего</p>
+            </div>
+            
+            <div class="slots-grid">
+                <div class="slot-card">
+                    <div class="slot-badge">VIP</div>
+                    <div class="slot-icon">🎰</div>
+                    <h3 class="slot-title">Gates of Olympus</h3>
+                    <div class="slot-stats">
+                        <span class="slot-stat">🔥 2 джекпота сегодня</span>
+                        <span class="slot-stat">💰 x5000 множитель</span>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>Does everyone receive 500% bonus?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>The maximum bonus is 500%, but the actual amount depends on your deposit size and current promotion terms on 1WIN.</p>
-                        </div>
+                    <button class="btn btn-slot">Играть</button>
+                </div>
+                
+                <div class="slot-card">
+                    <div class="slot-badge">HIT</div>
+                    <div class="slot-icon">🍬</div>
+                    <h3 class="slot-title">Sweet Bonanza</h3>
+                    <div class="slot-stats">
+                        <span class="slot-stat">🎯 Частые бонусы</span>
+                        <span class="slot-stat">💰 До x21,100</span>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>What's the minimum deposit?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Minimum deposit is $10 or equivalent in other currencies. The bonus is proportional to your deposit amount.</p>
-                        </div>
+                    <button class="btn btn-slot">Играть</button>
+                </div>
+                
+                <div class="slot-card">
+                    <div class="slot-badge">NEW</div>
+                    <div class="slot-icon">👸</div>
+                    <h3 class="slot-title">Starlight Princess</h3>
+                    <div class="slot-stats">
+                        <span class="slot-stat">💫 x5,000 множитель</span>
+                        <span class="slot-stat">🎮 Высокая RTP</span>
                     </div>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How fast are withdrawals?</span>
-                            <span class="faq-icon">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Most withdrawals are processed within 15 minutes to 24 hours, depending on the payment method and verification status.</p>
-                        </div>
+                    <button class="btn btn-slot">Играть</button>
+                </div>
+                
+                <div class="slot-card">
+                    <div class="slot-badge">HOT</div>
+                    <div class="slot-icon">💎</div>
+                    <h3 class="slot-title">Bonanza Billion</h3>
+                    <div class="slot-stats">
+                        <span class="slot-stat">🚀 Мега-выигрыши</span>
+                        <span class="slot-stat">💰 Бонус-игры</span>
+                    </div>
+                    <button class="btn btn-slot">Играть</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Отзывы игроков</h2>
+                <p class="section-subtitle">Реальные мнения о бонусе 1WIN</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-content">
+                        <p class="review-text">"Получил бонус 500%, все честно. Главное — читать условия отыгрыша."</p>
+                    </div>
+                    <div class="review-author">
+                        <span class="author-name">@alex_winner</span>
+                        <span class="author-tag">ставки + live</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-content">
+                        <p class="review-text">"Интерфейс удобный, вывод быстрый. Бонус помог протестировать стратегии."</p>
+                    </div>
+                    <div class="review-author">
+                        <span class="author-name">@casino_pro</span>
+                        <span class="author-tag">опыт 2 года</span>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-content">
+                        <p class="review-text">"Не воспринимайте как бесплатные деньги. Но для старта — отличный вариант."</p>
+                    </div>
+                    <div class="review-author">
+                        <span class="author-name">@smart_gambler</span>
+                        <span class="author-tag">ответственная игра</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA блок -->
-        <section class="cta-section" id="cta">
-            <div class="container">
-                <div class="cta-block">
-                    <h2>Your Winning Journey Starts Here</h2>
-                    <p>Don't miss this exclusive opportunity. Claim your 500% bonus before the offer expires!</p>
-                    
-                    <div class="cta-promo">
-                        <input type="text" class="cta-input" value="WIN500" readonly>
-                        <button class="btn btn-primary btn-large">🚀 Claim My Bonus</button>
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Частые вопросы</h2>
+                <p class="section-subtitle">Всё, что нужно знать о бонусе</p>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Это официальный сайт 1WIN?</span>
+                        <span class="faq-icon">+</span>
                     </div>
-                    
-                    <p class="cta-note">By clicking the button, you'll be redirected to the official 1WIN website</p>
+                    <div class="faq-answer">
+                        <p>Нет, это партнёрский промо-сайт. Мы предоставляем информацию и ссылки на официальный сайт 1WIN.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Бонус 500% получают все?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Размер бонуса зависит от суммы депозита и актуальных условий на сайте 1WIN. Максимальный бонус — до 500%.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Какие документы нужны для вывода?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Обычно паспорт или водительские права. Конкретные требования смотрите в разделе "Верификация" на 1WIN.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Сколько времени занимает вывод?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>От 15 минут до 24 часов, зависит от выбранного метода и суммы.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Подвал сайта -->
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">Не упусти свой шанс!</h2>
+                <p class="cta-text">Бонус до 500% доступен только новым игрокам. Действуй сейчас!</p>
+                
+                <div class="cta-promo">
+                    <input type="text" class="cta-input" value="WIN500" readonly>
+                    <button class="btn btn-primary btn-large">Забрать бонус →</button>
+                </div>
+                
+                <p class="cta-note">Нажимая кнопку, вы переходите на официальный сайт 1WIN</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">1WIN Pulse</div>
+                <div class="footer-main">
+                    <div class="footer-logo">1WIN PULSE</div>
                     <p class="footer-text">
-                        This promotional website provides information about 1WIN bonuses and offers. 
-                        All gambling activities take place on the official 1WIN platform under their terms and conditions.
+                        Этот сайт не является официальным сайтом 1WIN. Мы предоставляем информацию 
+                        о промо-предложениях и бонусах. Все азартные игры проходят на официальном сайте 1WIN.
                     </p>
                 </div>
                 
                 <div class="footer-warning">
-                    <p>⚠️ 18+ | Gambling involves risk. Please play responsibly.</p>
-                    <p>Set deposit limits and take breaks. Never chase losses.</p>
+                    <p>⚠️ 18+ | Азартные игры могут вызывать зависимость. Играйте ответственно.</p>
+                    <p>Не играйте на последние деньги. Устанавливайте лимиты по времени и деньгам.</p>
                 </div>
                 
-                <a href="#" class="footer-top">↑ Back to Top</a>
+                <a href="#" class="footer-top">Наверх ↑</a>
             </div>
         </div>
     </footer>
 
     <!-- Стики кнопка -->
     <div class="sticky-cta">
-        <a href="#cta" class="btn btn-primary">🎁 Get 500% Bonus</a>
+        <a href="#cta" class="btn btn-primary">Получить бонус 500%</a>
     </div>
 
     <!-- Чат виджет -->
-    <div class="chat-widget" id="chatWidget">
-        <div class="chat-toggle" id="chatToggle">
-            <div class="chat-label">Need Help?</div>
-            <div class="chat-notification">1</div>
-        </div>
+    <div class="chat-widget">
+        <button class="chat-trigger">
+            <span class="chat-icon">💬</span>
+            <span class="chat-pulse"></span>
+        </button>
         
-        <div class="chat-window" id="chatWindow">
-            <div class="chat-header">
-                <div class="chat-title">
-                    <div class="chat-avatar">🎅</div>
-                    <div>
-                        <h4>1WIN Assistant</h4>
-                        <p class="chat-status">Online • Fast Response</p>
-                    </div>
-                </div>
-                <button class="chat-close" id="chatClose">×</button>
-            </div>
-            
-            <div class="chat-messages" id="chatMessages">
-                <div class="message bot">
-                    <div class="message-content">
-                        Hello! I'm your 1WIN assistant. 🎄 How can I help you with bonuses, registration, or games?
-                    </div>
-                    <div class="message-time">just now</div>
-                </div>
-                
-                <div class="message bot">
-                    <div class="message-content">
-                        Choose a question or ask your own:
-                    </div>
-                    <div class="message-options">
-                        <button class="option-btn" data-question="How to get 500% bonus?">
-                            🎁 How to get 500% bonus?
-                        </button>
-                        <button class="option-btn" data-question="Is verification needed?">
-                            📋 Is verification needed?
-                        </button>
-                        <button class="option-btn" data-question="Withdrawal time?">
-                            ⏱️ Withdrawal time?
-                        </button>
-                        <button class="option-btn" data-question="Mobile app?">
-                            📱 Mobile app?
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="chat-input-area">
-                <input type="text" 
-                       class="chat-input" 
-                       id="chatInput" 
-                       placeholder="Type your question..."
-                       maxlength="200">
-                <button class="chat-send" id="chatSend">
-                    <span>Send</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="chat-footer">
-                <span class="chat-hint">💡 Response within 2 minutes</span>
-                <span class="chat-hint">🛡️ Secure & Confidential</span>
-            </div>
+        <div class="chat-container">
+            <!-- Контент чата будет добавлен через JS -->
         </div>
     </div>
 
